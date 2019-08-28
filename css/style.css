@@ -1,35 +1,136 @@
-﻿/*Stylesheet by Christian Knauer, 2/22/18*/
+/**
+ * Color Guide *
 
-/* ============================================================
-  Reset/Base CSS
-============================================================ */
-.html {
-    background-color: #fff;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 20px;
+ teal -- #00b8b8
+ dark teal -- #027d7d
+ hot pink -- #de3d83
+ yellow -- #e4bd0b
+ purple -- #9d4eb6
+ green -- #5da87b
+ grey -- #a5a5a5
+*/
+
+/**
+ * Normalize
+ */
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
-.body {
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+img {
+    border: 0;
+}
+
+figure {
     margin: 0;
-    padding: 0;
 }
-h1, h2, h3 {
-    margin: 1em 0;
+
+
+/**
+ * Typography   body, button, input, h1-h6, p, ul, strong etc..
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
-/* ============================================================
-  Layout CSS
-============================================================ */
+
+.logo {
+  color: #000;
+  font-size: 26px;
+  line-height: 40px; /* vert center */
+}
+
+nav a {
+  padding: 0px 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 15px;
+  line-height: 40px;  /* vert center */
+  font-weight: 400;
+  color: #a3a3a3;
+}
 
 
-/* ============================================================
-  Module CSS
-============================================================ */
+
+ /**
+  * Global Styles   .main-content-wrapper, p, a, a:visited, button
+ */
+.container {
+  max-width: 1400px;
+  margin: 0px auto;
+  /* border: 1px green solid; */
+}
+
+/* =====================================
+  MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
+===================================== */
+
+/**
+ * Header Styles   .header, .logo, .main-naviagtion etc.
+*/
+header {
+  height: 133px;
+  margin: 0px;
+}
+
+nav {
+  float: right;
+  margin-right: 57px;
+}
+
+.header-row {
+  height: 40px;
+  margin-top: 60px;
+}
+
+nav a:hover {
+  color: #565656;
+  text-decoration: none;
+}
+
+/**
+ * Footer Styles   .footer, footer-navigation, .copyright etc
+*/
 
 
-/* ============================================================
-  State CSS
-============================================================ */
+/* =====================================
+  PAGE STYLES   e.g. If we have Aerobics classes. Styles for the Classes.
+===================================== */
 
 
-/* ============================================================
-  Theme CSS
-============================================================ */
+/**
+*  Classes Styles   .classes, .classes-wrapper, .classes-container etc.
+*/
