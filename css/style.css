@@ -110,6 +110,10 @@ figure {
     margin: 0;
 }
 
+address {
+  margin: 0;
+}
+
 
 /**
  * Typography   body, button, input, h1-h6, p, ul, strong etc..
@@ -117,9 +121,12 @@ figure {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 }
 
-.logo {
+.header-logo {
   color: #000;
   font-size: 26px;
   line-height: 40px; /* vert center */
@@ -135,6 +142,23 @@ nav a {
   color: #a3a3a3;
 }
 
+h4 {   /* TODO: Make sure it fit into your typescale. Applied in Footer so far. */
+  font-size: 12px;
+  color: #444444;
+  margin: 56px 0px 21px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+address,
+.footer-copyright {
+  font-size: 12px;
+  color: #0a0a0a;
+  font-style: normal;
+  line-height: 17px;
+  font-weight: 400;
+}
 
 
  /**
@@ -143,9 +167,13 @@ nav a {
 .container {
   max-width: 1400px;
   margin: 0px auto;
-  /* border: 1px green solid; */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* TODO: Possibly fix shadow so it won't show on bottom. */
 }
 
+.container-margin {
+  width: 92%;
+  margin: 0 auto;
+}
 /* =====================================
   MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
 ===================================== */
@@ -160,12 +188,11 @@ header {
 
 nav {
   float: right;
-  margin-right: 57px;
 }
 
 .header-row {
   height: 40px;
-  margin-top: 60px;
+  padding-top: 63px;
 }
 
 nav a:hover {
@@ -177,6 +204,37 @@ nav a:hover {
  * Footer Styles   .footer, footer-navigation, .copyright etc
 */
 
+footer {
+  background-color: #fcfcfc;
+  height: 330px;
+  overflow: hidden; /* prevent margin collapse */
+}
+
+.footer-row {
+  margin-top: 105px;
+}
+
+.footer-copyright {
+  height: 30px; /** vert center **/
+  line-height: 30px; /** vert center **/
+}
+
+.footer-social {
+  height: 30px; /** vert center **/
+  line-height: 30px; /** vert center **/
+}
+
+.fa-twitter,
+.fa-facebook-f {
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  color: #0a0a0a;
+}
+
+.fa-twitter {
+  padding-right: 14px;
+}
 
 /* =====================================
   PAGE STYLES   e.g. If we have Aerobics classes. Styles for the Classes.
