@@ -249,6 +249,13 @@ footer {
   padding-right: 14px;
 }
 
+.fa-twitter:hover,
+.fa-facebook-f:hover {
+  color: #fff;
+  -webkit-transition: all 0.2s linear;
+  text-decoration: none;
+}
+
 /* =====================================
   PAGE STYLES   e.g. If we have Aerobics classes. Styles for the Classes.
 ===================================== */
