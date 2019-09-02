@@ -286,6 +286,64 @@ footer {
 .landing-hero {
   width: 100%;
   height: 700px;
+
+  /* Animation */
+  background-image: url("../img/hero-gallery1.jpg"); /* TODO: Relative path may need to be changed. */
+  background-size: cover;
+  animation-name: changeImage;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: changeImage;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* Cycle through images. */
+@keyframes changeImage {
+  0% {background-image: url("../img/hero-gallery1.jpg");} /* TODO: Relative paths may need to be changed. */
+  13.17% {background-image: url("../img/hero-gallery1.jpg");}
+  16.67% {background-image: url("../img/hero-gallery2.jpg");}
+  29.84% {background-image: url("../img/hero-gallery2.jpg");}
+  33.34% {background-image: url("../img/hero-gallery3.jpg");}
+  46.51% {background-image: url("../img/hero-gallery3.jpg");}
+  50.00% {background-image: url("../img/hero-gallery4.jpg");}
+  63.17% {background-image: url("../img/hero-gallery4.jpg");}
+  66.67% {background-image: url("../img/hero-gallery5.jpg");}
+  79.84% {background-image: url("../img/hero-gallery5.jpg");}
+  83.34% {background-image: url("../img/hero-gallery6.jpg");}
+  96.51% {background-image: url("../img/hero-gallery6.jpg");}
+  100% {background-image: url("../img/hero-gallery1.jpg");}
+}
+
+@-webkit-keyframes changeImage {
+  0% {background-image: url("../img/hero-gallery1.jpg");} /* TODO: Relative paths may need to be changed. */
+  13.17% {background-image: url("../img/hero-gallery1.jpg");}
+  16.67% {background-image: url("../img/hero-gallery2.jpg");}
+  29.84% {background-image: url("../img/hero-gallery2.jpg");}
+  33.34% {background-image: url("../img/hero-gallery3.jpg");}
+  46.51% {background-image: url("../img/hero-gallery3.jpg");}
+  50.00% {background-image: url("../img/hero-gallery4.jpg");}
+  63.17% {background-image: url("../img/hero-gallery4.jpg");}
+  66.67% {background-image: url("../img/hero-gallery5.jpg");}
+  79.84% {background-image: url("../img/hero-gallery5.jpg");}
+  83.34% {background-image: url("../img/hero-gallery6.jpg");}
+  96.51% {background-image: url("../img/hero-gallery6.jpg");}
+  100% {background-image: url("../img/hero-gallery1.jpg");}
+}
+
+/* Pre-load images */
+:root:before {
+  content: url(../img/hero-gallery1.jpg) /* TODO: Relative paths may need to be changed. */
+           url(../img/hero-gallery2.jpg)
+           url(../img/hero-gallery3.jpg)
+           url(../img/hero-gallery4.jpg)
+           url(../img/hero-gallery5.jpg)
+           url(../img/hero-gallery6.jpg);
+  /* partial fallback */
+  background-image: url(../img/hero-gallery1.jpg); /* TODO: Relative path may need to be changed. */
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
 }
 
 .landing-main {
