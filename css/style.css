@@ -346,5 +346,6 @@ footer {
 .landing-a:hover {
   color: #414141;
   -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
 }
