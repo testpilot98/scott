@@ -272,6 +272,7 @@ footer {
 .fa-facebook-f:hover {
   color: #fff;
   -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
 }
 
