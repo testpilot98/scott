@@ -96,6 +96,8 @@ a {
     background-color: transparent;
     text-decoration: none;
     color: inherit;
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
 }
 
 a:hover {
