@@ -401,6 +401,10 @@ footer {
   width: 100%;
 }
 
+.works-main-container {
+  margin-top: 69px;
+}
+
 .works-main-text-wrap {
   margin-right: 66px;
 }
@@ -431,4 +435,20 @@ footer {
   background-size: cover;
 
   border: 1px solid skyblue;
+}
+
+.works-main-img-wrap:nth-of-type(1) {
+  background-image: url(../img/hero-gallery1.jpg);
+}
+.works-main-img-wrap:nth-of-type(2) {
+  background-image: url(../img/hero-gallery2.jpg);
+}
+.works-main-img-wrap:nth-of-type(3) {
+  background-image: url(../img/hero-gallery3.jpg);
+}
+.works-main-img-wrap:nth-of-type(4) {
+  background-image: url(../img/hero-gallery4.jpg);
+}
+.works-main-img-wrap:nth-of-type(5) {
+  background-image: url(../img/hero-gallery5.jpg);
 }
