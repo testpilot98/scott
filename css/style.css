@@ -396,3 +396,35 @@ footer {
 .works-intro-img-wrap {
   width: 100%;
 }
+
+.works-main-text-wrap {
+  margin-right: 66px;
+}
+
+.works-main-text-wrap p { /* TODO: Move to global styles? */
+  text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #444;
+  letter-spacing: 0px;
+  padding-top: 22.5px;
+}
+
+.works-main-gallery-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.works-main-img-wrap {
+  width: 22.3529%;
+  padding-top: 22.3529%;  /* Trick to have 1:1 Aspect Ratio */
+
+  margin: 22.5px 0px;
+
+  background-position: center;
+  background-size: cover;
+
+  border: 1px solid skyblue;
+}
