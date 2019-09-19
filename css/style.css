@@ -187,6 +187,10 @@ address,
  /**
   * Global Styles   .main-content-wrapper, p, a, a:visited, button
  */
+.page-margin {
+  margin: 0 85px;
+}
+
 .container {
   max-width: 1400px;
   margin: 0px auto;
