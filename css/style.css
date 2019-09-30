@@ -456,3 +456,155 @@ footer {
   height: 100%;
   position: absolute;
 }
+
+
+/**
+ *  Mfp-Lightbox Styles
+ */
+
+.mfp-title {
+  font-family: 'Open Sans';
+  font-size: 12px;
+}
+
+img.mfp-img {
+  padding: 55px 0px 55px;
+}
+
+.mfp-figure:after {
+  top: 55px;
+  bottom: 55px;
+}
+
+.mfp-bottom-bar {
+  margin-top: -40px;
+}
+
+.mfp-container {
+  padding: 0px 20px;
+}
+
+.mfp-figure:after {
+  box-shadow: none;
+}
+
+/**
+ *  Mfp-Lightbox Transitions between Slides.
+ */
+
+.mfp-ready .mfp-figure {
+ opacity: 0;
+}
+
+.mfp-zoom-in {
+ /* start state */
+ /* animate in */
+ /* animate out */
+}
+/* Image in*/
+.mfp-zoom-in .mfp-figure, .mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler{
+   opacity: .8;
+   -webkit-transition: all 0.2s ease-out;
+   transition: all 0.2s ease-out;
+   -webkit-transform: scale(0.9);
+   -ms-transform: scale(0.9);
+   transform: scale(0.9);
+}
+/* Background in*/
+.mfp-zoom-in.mfp-bg,
+.mfp-zoom-in .mfp-preloader {
+ opacity: .6;
+ -webkit-transition: all 0.2s ease-out;
+ transition: all 0.2s ease-out;
+}
+/* Image when displaying images*/
+.mfp-zoom-in.mfp-image-loaded .mfp-figure, .mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler{
+   opacity: 1;
+   -webkit-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+}
+/* Background when displaying images*/
+.mfp-zoom-in.mfp-ready.mfp-bg,
+.mfp-zoom-in.mfp-ready .mfp-preloader {
+   opacity: 0.8;
+}
+/* Image out (when closing lightbox) */
+.mfp-zoom-in.mfp-removing .mfp-figure, .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler{
+   -webkit-transform: scale(0.9);
+   -ms-transform: scale(0.9);
+   transform: scale(0.9);
+   opacity: 0;
+}
+/* Background out */
+.mfp-zoom-in.mfp-removing.mfp-bg,
+.mfp-zoom-in.mfp-removing .mfp-preloader {
+   opacity: 0;
+}
+
+.mfp-iframe-scaler{ overflow: visible; /*so the close button is shown*/}
+.mfp-zoom-out-cur { cursor: auto; }
+
+ /**
+  *  IcoMoon icon implementatio in Mfp-Lightbox.
+  */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?4ik9sj');
+  src:  url('../fonts/icomoon.eot?4ik9sj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?4ik9sj') format('truetype'),
+    url('../fonts/icomoon.woff?4ik9sj') format('woff'),
+    url('../fonts/icomoon.svg?4ik9sj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.mfp-close {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* line-height: 1; */
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mfp-close:before {
+  content: "\e901";
+}
+
+/* Cutom IcoMoon Styling for Close Button */
+
+.mfp-close:before {
+  font-size: 22px;
+}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+    padding-right: 0px;
+    width: auto;
+    /* Transitions */
+    transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
+    -webkit-transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
+}
+
+.mfp-close {
+  font-size: 100%;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
+  margin-top: 20px;
+  padding: 0px;
+  top: 0px;
+}
+/* Rotation of Closing X */
+.mfp-close:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
