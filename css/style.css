@@ -419,8 +419,8 @@ footer {
 }
 
 .works-main-img-wrap {
-  width: calc(0.25 *(100% - 90px));
-  padding-top: calc(0.25 *(100% - 90px));  /* For aspect ratio. */
+  width: calc(0.2499 *(100% - 90px));  /* TODO: Possibly change back to 25%. And add 24.99 via JS for IE and Edge only. */
+  padding-top: calc(0.2499 *(100% - 90px));  /* For aspect ratio. */ /* TODO: Possibly change back to 25%. And add 24.99 via JS for IE and Edge only. */
   position: relative;
 
   margin: 22.5px 0px;
@@ -444,7 +444,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* TODO: no ie support. test w modernizer for object-fit, use js if not supported */
+  object-fit: cover; /* TODO: No IE support. Blurry in Edge. Test w modernizer for object-fit, use JS if not supported. Use article found online.*/
 }
 
 /* TODO: needed? */
