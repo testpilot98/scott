@@ -195,7 +195,6 @@ address,
   max-width: 1400px;
   margin: 0px auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* TODO: Possibly fix shadow so it won't show on bottom. */
-  -webkit-transform: translateZ(0); /* This div becomes parent of fixed header. No IE support. */ /* TODO: Only trigger JS if no browser support. */
 }
 
 .container-margin {
