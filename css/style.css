@@ -202,6 +202,36 @@ address,
   margin: 0 auto;
 }
 
+.intro-container {
+  margin-top: 40px;
+}
+
+.intro-text-container {
+  position: relative; /* Vert center */
+  height: auto;
+}
+
+.intro-text-wrap {
+  padding-right: 4.2%;
+  text-align: center;
+  width: 100%;
+  /* Vert center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro-img-container {
+  position: relative;
+  text-align: center;
+}
+
+.intro-img-wrap {
+  width: 100%;
+}
+
+
 /* =====================================
   MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
 ===================================== */
@@ -359,27 +389,7 @@ footer {
 *  Works Styles
 */
 
-.works-intro-container {
-  height: 450px;
-  margin-top: 40px;
-}
-
-.works-intro-text-container {
-  position: relative; /* Vert center */
-}
-
-.works-intro-text-wrap {
-  padding-right: 4.2%;
-  text-align: center;
-  width: 100%;
-  /* Vert center */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.works-intro-text-wrap h1 {
+.intro-text-wrap h1 {
   padding: 0px; /* TODO: Include in reset not here. */
   margin: 0px; /* TODO: Include in reset not here. */
   font-weight: 300;
@@ -389,15 +399,6 @@ footer {
   font-size: 54px;
   line-height: 62px;
   text-transform: uppercase;
-}
-
-.works-intro-img-container {
-  position: relative;
-  text-align: center;
-}
-
-.works-intro-img-wrap {
-  width: 100%;
 }
 
 .works-main-container {
