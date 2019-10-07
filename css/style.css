@@ -157,6 +157,18 @@ nav a {
   color: #a3a3a3;
 }
 
+h1 {
+  padding: 0px; /* TODO: Include in reset not here. */
+  margin: 0px; /* TODO: Include in reset not here. */
+  font-weight: 300;
+  color: #444;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 54px;
+  line-height: 62px;
+  text-transform: uppercase;
+}
+
 h2 { /* TODO: Make sure it fit into your typescale. Applied index-main so far. */
   font-size: 34px;
   line-height: 44px;
@@ -437,18 +449,6 @@ footer {
 /**
 *  Works Styles
 */
-
-.works-intro-text-wrap h1 { /* TODO: Include in Typography */
-  padding: 0px; /* TODO: Include in reset not here. */
-  margin: 0px; /* TODO: Include in reset not here. */
-  font-weight: 300;
-  color: #444;
-  letter-spacing: 0px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 54px;
-  line-height: 62px;
-  text-transform: uppercase;
-}
 
 .works-main-container {
   margin: 95px 0px 57px;
