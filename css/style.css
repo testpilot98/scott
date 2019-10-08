@@ -338,6 +338,7 @@ address,
   font-size: 12px;
   line-height: 17px;
   margin: 0px;
+  white-space: nowrap;
 }
 
 .gal-txt-wrap p a { /* TODO: Really needed? */
@@ -721,4 +722,18 @@ img.mfp-img {
 
 .design-main-container {
   margin: 130px 0px 32px;
+}
+
+/**
+*  Exhibitions Styles
+*/
+
+.exhibitions-main-container {
+  margin: 120px 0px 32px;
+}
+
+.exhibitions-main-container h2 {  /* TODO: Move to Typography and check other h2. */
+  color: #444444;
+  text-transform: uppercase;
+  margin-top: 25px;
 }
