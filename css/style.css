@@ -240,6 +240,13 @@ address,
 }
 
 .intro-img-wrap {
+  width: 600px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.intro-img-wrap img {
+  height: 100%;
   width: 100%;
 }
 
@@ -652,6 +659,10 @@ img.mfp-img {
   color: #555555;
 }
 
+.contact-intro-img-wrap {
+  height: 300px;
+}
+
 .contact-main-container {
   margin-top: 118px;
   margin-bottom: 57px;
@@ -673,4 +684,12 @@ img.mfp-img {
   color: #676767;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
+}
+
+/**
+*  Design Styles
+*/
+
+.design-main-container {
+  margin: 130px 0px 57px;
 }
