@@ -239,6 +239,18 @@ address,
   transform: translate(-50%, -50%);
 }
 
+.intro-text-wrap h4 { /* TODO: Sort conflict with other h4s. Also needs to be in Typography. */
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #444;
+  margin: 0px;
+  padding-top: 18px;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
 .intro-img-container {
   position: relative;
   text-align: center;
@@ -321,7 +333,7 @@ address,
   position: relative;
 }
 
-.gal-txt-wrap h4 { /* TODO: Sort conflict with other h4. Also needs to be in Typography. */
+.gal-txt-wrap h4 { /* TODO: Sort conflict with other h4s. Also needs to be in Typography. */
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
