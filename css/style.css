@@ -255,6 +255,10 @@ address,
   width: 100%;
 }
 
+.main-container {
+  margin: 95px 0px 57px;
+}
+
 .main-text-wrap {
   margin-right: 70px;
 }
@@ -497,9 +501,7 @@ footer {
 *  Works Styles
 */
 
-.works-main-container {
-  margin: 95px 0px 57px;
-}
+
 
 /**
  *  Mfp-Lightbox Styles
