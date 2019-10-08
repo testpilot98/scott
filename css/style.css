@@ -96,8 +96,6 @@ a {
     background-color: transparent;
     text-decoration: none;
     color: inherit;
-    transition: color 0.2s;
-    -webkit-transition: color 0.2s;
 }
 
 a:hover {
@@ -131,6 +129,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #676767; /* TODO: Verify */
+}
+
+a {
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
 }
 
 .header-logo {
@@ -199,6 +203,7 @@ address,
  /**
   * Global Styles   .main-content-wrapper, p, a, a:visited, button
  */
+
 .page-margin {
   margin: 0 85px;
 }
@@ -254,7 +259,7 @@ address,
   margin-right: 70px;
 }
 
-.main-text-wrap p {
+.main-text-wrap p { /* TODO: Move to Typography. */
   text-align: justify;
   font-size: 14px;
   line-height: 20px;
@@ -293,10 +298,6 @@ address,
   right: 0;
 } /* end tricky part*/
 
-.gal-txt-wrap {
-  position: relative;
-}
-
 .gal-img-wrap img {
   width: 100%;
   height: 100%;
@@ -312,6 +313,31 @@ address,
   position: absolute;
 } */
 
+.gal-txt-wrap {
+  position: relative;
+}
+
+.gal-txt-wrap h4 { /* TODO: Sort conflict with other h4. Also needs to be in Typography. */
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #444;
+  margin: 0px;
+  padding-top: 2px;
+  text-transform: none;
+}
+
+.gal-txt-wrap p { /* TODO: Move to Typography. */
+  color: #676767;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.gal-txt-wrap p a { /* TODO: Really needed? */
+  color: #555555;
+}
 
 /* =====================================
   MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
