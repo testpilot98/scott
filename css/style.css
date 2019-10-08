@@ -251,6 +251,26 @@ address,
   -webkit-font-smoothing: antialiased;
 }
 
+.intro-text-wrap hr {  /* TODO: Move to Typography. */
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1.2px solid #444;
+    margin: 1.1em auto;
+    padding: 0;
+    width: 35%;
+
+}
+
+.intro-text-wrap p { /* TODO: Sort conflict with other p's. Also needs to be in Typography. */
+  font-size: 12px;
+  line-height: 17px;
+  color: #676767;
+  text-align: justify;
+  margin: 0px;
+  padding-top: 18px;
+}
+
 .intro-img-container {
   position: relative;
   text-align: center;
