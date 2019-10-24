@@ -1,3 +1,5 @@
+// HEADER WIDTH
+
 let onLoad = function () {
   setHeaderWidth();
 };
@@ -11,14 +13,14 @@ let onResize = function () {
 window.addEventListener('resize', onResize);
 
 let setHeaderWidth = function () {
-  let header = document.getElementsByTagName('header')[0],
+  let header = document.getElementsByClassName('js-header')[0],
       containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
 
   header.style.width = containerWidth + 'px';
 };
 
 
-//Required for MagnificPopup
+// MAGNIFIC POPUP
 
 $(document).ready(function() {
   $('#mfp-portfolio').magnificPopup({

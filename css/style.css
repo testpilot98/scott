@@ -140,7 +140,7 @@ a {
 .header-logo {
   color: #000;
   font-size: 28px;
-  line-height: 40px; /* vert center */
+  line-height: 60px; /* TODO: Adjust for final font. */
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 4px; /* TODO: Adjust/delte depending on font. */
@@ -156,7 +156,6 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 15px;
-  line-height: 40px;  /* vert center */
   font-weight: 400;
   color: #a3a3a3;
 }
@@ -410,7 +409,7 @@ address,
 /**
  * Header Styles   .header, .logo, .main-naviagtion etc.
 */
-.header-margin {
+.header-margin-top {
   height: 134px;
 }
 
@@ -425,13 +424,33 @@ header {
   z-index: 10;
 }
 
+.header-row {
+  /* height: 40px; */
+  padding-top: 58px;
+}
+
 nav {
   float: right;
 }
 
-.header-row {
-  height: 40px;
-  padding-top: 63px;
+nav li {
+  list-style-type: none;
+  float: left;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 14px 11px 39px;
+}
+
+.material-icons.nav-expand-more {
+  position: relative;
+  left: 2.5px;
+  top: 1.5px;
+  pointer-events: none; /* TODO: take out?? */
+  font-size: 15px;
+  line-height: 0;
+  font-weight: 200;
 }
 
 nav a:hover {
