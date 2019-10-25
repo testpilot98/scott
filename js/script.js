@@ -63,3 +63,63 @@ $(document).ready(function() {
     }
   });
 });
+
+
+// MAIN NAVIGATION
+
+let showDropdown = (e) => {
+  if (e.target.classList.contains('js-nav-open')) {
+    clearTimeout(delayHide);
+
+    let show = () => {
+      let subMenu = document.getElementById('js-sub-menu');
+
+      // Hide all sub-menu content when hovering over menu-items.
+      let divArr = subMenu.querySelectorAll('div'); // Get all sub-menu divs.
+      for (let i = 0; i < divArr.length; i++) { // Add js-hide to all divs.
+        divArr[i].classList.add('js-hide');
+      }
+
+      // Show drop down container.
+      subMenu.classList.remove('js-hide');
+
+      // Show content-e.target
+      let triggerClass =  e.target.classList[0]; // Get class that links to sub-menu content.
+      document.getElementsByClassName(triggerClass)[1].classList.remove('js-hide'); // Get 2nd elem w/that class, which is the sub-menu content, and display it.
+    };
+
+    let delayShow = setTimeout(show, 200);
+  }
+};
+
+document.getElementsByTagName('nav')[0].addEventListener('mouseover', function (e) {
+  showDropdown(e);
+}, false);
+
+
+// If mouseenter on drop down cancel timeout for closing it.
+document.getElementById('js-sub-menu').addEventListener('mouseover', function () {
+  clearTimeout(delayHide);
+}, false);
+
+let delayHide;
+
+let hideDropdown = (e) => {
+  if (!e.relatedTarget.classList.contains('js-nav-open')) {
+    let hide = () => {
+      let subMenu = document.getElementById('js-sub-menu');
+      // Hide drop down container.
+      subMenu.classList.add('js-hide');
+    };
+
+    delayHide = setTimeout(hide, 600);
+  }
+};
+
+// Loop over all class-names 'nav-open' and add eventlistener to them.
+let navOpenArr = document.getElementsByClassName('js-nav-open');
+for (let i = 0; i < navOpenArr.length; i++) {
+  navOpenArr[i].addEventListener('mouseleave', function (e) {
+    hideDropdown(e);
+  }, false);
+};

@@ -487,6 +487,10 @@ nav a:hover {
   background-color: #272727 !important;
 }
 
+.js-hide { /* TODO: Add to global styles and implement it whereever display none is used w/JS. */
+  display: none;
+}
+
 /**
  * Footer Styles   .footer, footer-navigation, .copyright etc
 */
