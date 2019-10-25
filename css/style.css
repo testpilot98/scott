@@ -457,6 +457,36 @@ nav a:hover {
   color: #565656;
 }
 
+.nav-sub-menu {
+  width: 92%;
+  top: 133px; /* Set same as header height. */
+  padding: 15px 0;
+  position: absolute;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background: #fff; /* TODO: take out */
+}
+
+.nav-sub-menu a {  /* TODO: Move to Typography? */
+  display: block;
+  padding: 9px 15px;
+  font-size: 14px; /* TODO: Change font size? */
+  line-height: 13px;
+  transition: none;
+  letter-spacing: 0;
+  color: #a5a5a5;
+}
+
+.nav-sub-menu a:hover {  /* TODO: Change styling? */
+  color: #ccc;
+  background-color: #272727;
+}
+
+.nav-sub-menu-selected { /* TODO: Apply this class in html. */
+  color: #0a0a0a !important;
+  background-color: #272727 !important;
+}
+
 /**
  * Footer Styles   .footer, footer-navigation, .copyright etc
 */
