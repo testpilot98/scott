@@ -458,7 +458,7 @@ nav a:hover {
 }
 
 .nav-sub-menu {
-  width: 92%;
+  /* width: 92%; */
   top: 133px; /* Set same as header height. */
   padding: 15px 0;
   position: absolute;
@@ -469,7 +469,8 @@ nav a:hover {
 
 .nav-sub-menu a {  /* TODO: Move to Typography? */
   display: block;
-  padding: 9px 15px;
+  padding: 9px 45px;
+  margin: 7px 0;
   font-size: 14px; /* TODO: Change font size? */
   line-height: 13px;
   transition: none;

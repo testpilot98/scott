@@ -86,6 +86,22 @@ let showDropdown = (e) => {
       // Show content-e.target
       let triggerClass =  e.target.classList[0]; // Get class that links to sub-menu content.
       document.getElementsByClassName(triggerClass)[1].classList.remove('js-hide'); // Get 2nd elem w/that class, which is the sub-menu content, and display it.
+
+
+      // Shift drop down into place.
+
+      // Get a-tag position.
+      let rectTarget = e.target.getBoundingClientRect();
+      let leftEdgeOfTarget = rectTarget.left;
+      // Find drop down postion same as left edge of a-tag.
+      let headerOffsetLeft = document.getElementsByClassName('js-header')[0].offsetLeft;
+      let subMenuLeftPosition = leftEdgeOfTarget - headerOffsetLeft;
+      // Find length of drop down to center it under respective a-tag.
+      let subMenuWidth = subMenu.offsetWidth;  // This has to run after we display both submenu and its child divs.
+      let aTagWidth = e.target.offsetWidth;
+      let adjustSubMenuPosition = (subMenuWidth - aTagWidth) / 2
+      // Set drop down position
+      subMenu.style.left = (subMenuLeftPosition - adjustSubMenuPosition) + 'px';
     };
 
     let delayShow = setTimeout(show, 200);
