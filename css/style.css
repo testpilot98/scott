@@ -433,6 +433,12 @@ nav {
   float: right;
 }
 
+@media(max-width: 1250px) {
+  nav ul {
+    display: none;
+  }
+}
+
 nav li {
   list-style-type: none;
   float: left;
