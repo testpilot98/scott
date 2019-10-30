@@ -546,6 +546,25 @@ nav a:hover {
   border: 1px solid red;
 }
 
+.material-icons-round.nav-close-btn {
+	color: #000;
+  opacity: .9;
+  font-size: 29px;
+  font-weight: 100;
+  top: 21px;
+  right: 26px;
+  position: absolute;
+  transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
+  -webkit-transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
+  cursor: pointer;
+  -webkit-text-stroke: 0.1px #fff; /* make icon-font thinner */
+}
+
+.material-icons-round.nav-close-btn:hover {
+  -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
 /**
  * Footer Styles   .footer, footer-navigation, .copyright etc
 */
