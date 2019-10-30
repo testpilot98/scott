@@ -534,6 +534,7 @@ nav a:hover {
 .mobNav-container {
   width: 300px;
   height: 100%;
+  padding: 33px;
   position: fixed;
   right: 0;
   top: 0;
@@ -558,11 +559,23 @@ nav a:hover {
   -webkit-transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
   cursor: pointer;
   -webkit-text-stroke: 0.1px #fff; /* make icon-font thinner */
+  z-index: 3;
 }
 
 .material-icons-round.nav-close-btn:hover {
   -webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
+}
+
+.mobNav-slide {
+  color: #000;
+  overflow: hidden;
+  height: 267px;
+  width: 234px;
+  position: absolute;
+  transition: 1s; /* TODO: adjust */
+  z-index: 2;
+  border: 1px dotted purple;
 }
 
 /**
