@@ -543,7 +543,7 @@ nav a:hover {
   overflow: hidden;
   background: #fff;
   z-index: 11;
-  /* right: -300px; */ /* TODO: Needed? */
+  right: -300px;
   transition: 1s; /* TODO: Adjust properly. */
   background: linear-gradient(145deg, #ffffff, #eaeaea);
   border: 1px solid red;
@@ -577,6 +577,7 @@ nav a:hover {
   position: absolute;
   transition: 1s; /* TODO: adjust */
   z-index: 2;
+  right: 33px;
   border: 1px dotted purple;
 }
 
@@ -605,6 +606,18 @@ nav a:hover {
   margin-left: -10px;
   line-height: 25px;
   background: rgba(0, 0, 0, 0.13);
+}
+
+.js-mobNav-left {
+  right: 300px;
+}
+
+.js-mobNav-right {
+  right: -300px;
+}
+
+.js-mobNav-slideIn {
+  right: 0;
 }
 
 /**

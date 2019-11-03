@@ -48,7 +48,7 @@
                 <li><a class="js-nav-more js-nav-open" href="">More<i class="material-icons nav-expand-more">expand_more</i></a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              <a href="#" class="burger-menu"></a>
+              <a href="#" id="js-mobNav-open" class="burger-menu"></a>
             </nav>
             <!-- Sub menu -->
             <div id="js-sub-menu" class="nav-sub-menu js-nav-open js-hide">
@@ -72,34 +72,34 @@
           </div>
         </div>
         <!-- Mobile menu -->
-        <div class="mobNav-container">
-          <i class="material-icons-round nav-close-btn">close</i>
+        <div class="mobNav-container js-mobNav-container">
+          <i id="js-mobNav-close" class="material-icons-round nav-close-btn">close</i>
           <div class="mobNav-slide">
             <a href="#">Works</a>
-            <a href="#">Design</a>
-            <a href="#">Exhibitions</a>
-            <a href="#">More</a>
+            <a href="#" id="js-mobNav-design" class="js-mobNav-next">Design</a>
+            <a href="#" id="js-mobNav-exhibitions" class="js-mobNav-next">Exhibitions</a>
+            <a href="#" id="js-mobNav-more" class="js-mobNav-next">More</a>
             <a href="#">Contact</a>
           </div>
-          <!-- <div class="mobNav-slide">
-            <span class="mobNav-prev">Back</span>
+          <div class="mobNav-slide js-mobNav-design js-mobNav-right">
+            <span class="mobNav-prev js-mobNav-prev">Back</span>
             <a href="#">Interior Design</a>
             <a href="#">Fashion</a>
             <a href="#">Snowboards</a>
-          </div> -->
-          <!-- <div class="mobNav-slide">
-            <span class="mobNav-prev">Back</span>
+          </div>
+          <div class="mobNav-slide js-mobNav-exhibitions js-mobNav-right">
+            <span class="mobNav-prev js-mobNav-prev">Back</span>
             <a href="#">Manni Mason</a>
             <a href="#">Frank Powel</a>
             <a href="#">Scott Forrest</a>
             <a href="#">List Ferris</a>
           </div>
-          <div class="mobNav-slide">
-            <span class="mobNav-prev">Back</span>
+          <div class="mobNav-slide js-mobNav-more js-mobNav-right">
+            <span class="mobNav-prev js-mobNav-prev">Back</span>
             <a href="#">Restauration</a>
             <a href="#">Community</a>
             <a href="#">Press</a>
-          </div> -->
+          </div>
         </div>
       </header> <!--End Header-->
 

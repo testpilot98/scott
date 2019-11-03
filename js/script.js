@@ -139,3 +139,76 @@ for (let i = 0; i < navOpenArr.length; i++) {
     hideDropdown(e);
   }, false);
 };
+
+
+// START MOBILE NAVIGATION
+
+// MOVE SLIDES INSIDE NAVIGATION CONTAINER
+
+let shiftSlide = (e) => {
+
+  // Move clicked slide left/right depending on if prev/next button was clicked.
+  let shiftCurrentSlide = (shiftDir) => {
+    e.target.parentNode.classList.add(shiftDir);
+  };
+
+  // Move linked slide left
+  let shiftLinkedSlideLeft = (className) => {
+    // Get all elems with class name.
+    let classCollection = document.getElementsByClassName(className);
+    // Loop over all elems and remove class that holds them right.
+    for (let i = 0; i < classCollection.length; i++) {
+      classCollection[i].classList.remove('js-mobNav-right');
+    }
+  };
+
+  // Move linked slides on left to center
+  let shiftLinkedSlideRight = () => {
+    let slidesOnLeft = document.getElementsByClassName('js-mobNav-left'),
+        topSlide = slidesOnLeft.length - 1;
+
+    slidesOnLeft[topSlide].classList.remove('js-mobNav-left');
+  };
+
+  // Logic
+  let shiftDir, className, idName;
+  // If link to new slide is clicked.
+  if (e.target.classList.contains('js-mobNav-next')) {
+    shiftCurrentSlide('js-mobNav-left');
+    idName = e.target.id; // Id on link
+    shiftLinkedSlideLeft(idName);
+
+    // If back link is clicked.
+  } else if (e.target.classList.contains('js-mobNav-prev')) {
+    shiftCurrentSlide('js-mobNav-right');
+    shiftLinkedSlideRight();
+  }
+
+};
+
+document.getElementsByClassName('js-mobNav-container')[0].addEventListener('click', function (e) {
+  shiftSlide(e);
+}, false);
+
+
+// MOVE MOBILE NAVIGATION CONTAINER
+
+let shiftMobNav = (e) => {
+
+  let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0];
+
+  // If open buttons clicked, move mobile-nav-container in viewport.
+  if (e.target.id === 'js-mobNav-open') {
+    mobNavContainer.classList.add('js-mobNav-slideIn');
+  // If close buttons clicked, or click outside mobile-nav-container move it out viewport.
+  } else if ((e.target.id === 'js-mobNav-close') || (!mobNavContainer.contains(e.target))) {
+    mobNavContainer.classList.remove('js-mobNav-slideIn');
+  }
+
+};
+
+document.body.addEventListener('click', function (e) {
+  shiftMobNav(e);
+}, false);
+
+// END MOBILE NAVIGATION
