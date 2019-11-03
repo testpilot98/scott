@@ -543,8 +543,9 @@ nav a:hover {
   overflow: hidden;
   background: #fff;
   z-index: 11;
-  /* right: -300px; */
+  /* right: -300px; */ /* TODO: Needed? */
   transition: 1s; /* TODO: Adjust properly. */
+  background: linear-gradient(145deg, #ffffff, #eaeaea);
   border: 1px solid red;
 }
 
@@ -571,7 +572,7 @@ nav a:hover {
 .mobNav-slide {
   color: #000;
   overflow: hidden;
-  height: 267px;
+  /* height: 100%; */ /* TODO: Needed? */
   width: 234px;
   position: absolute;
   transition: 1s; /* TODO: adjust */
