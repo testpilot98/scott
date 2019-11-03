@@ -588,9 +588,13 @@ nav a:hover {
   line-height: 30px;
   font-size: 18px;
   font-family: 'Open Sans';
-  -webkit-transition: opacity 0.2s ease color 0.2s ease;
-  transition: opacity 0.2s ease color 0.2s ease;
+  -webkit-transition: opacity 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
   opacity: 0.7;
+}
+
+.mobNav-slide a:hover {
+  opacity: 1;
 }
 /**
  * Footer Styles   .footer, footer-navigation, .copyright etc
