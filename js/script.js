@@ -196,7 +196,7 @@ document.getElementsByClassName('js-mobNav-container')[0].addEventListener('clic
 let shiftMobNav = (e) => {
 
   let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
-      header = document.getElementsByClassName('js-header')[0];
+      header = document.getElementsByClassName('js-header')[0],
       pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
 
   // If open buttons clicked, move mobile-nav-container in viewport and add page layover.
