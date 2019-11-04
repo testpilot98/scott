@@ -206,6 +206,7 @@ let shiftMobNav = (e) => {
   // If close buttons clicked, or click outside mobile-nav-container move it out viewport.
 } else if ((e.target.id === 'js-mobNav-close') || (!header.contains(e.target))) {
     mobNavContainer.classList.remove('js-mobNav-slideIn');
+    pageLayover.classList.remove('js-pageLayover-show');
   }
 
 };
