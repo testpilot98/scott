@@ -65,13 +65,15 @@ $(document).ready(function() {
 });
 
 
-// MAIN NAVIGATION
+// START MAIN NAVIGATION
 
 let showDropdown = (e) => {
+
   if (e.target.classList.contains('js-nav-open')) {
     clearTimeout(delayHide);
 
     let show = () => {
+
       let subMenu = document.getElementById('js-sub-menu');
 
       // Hide all sub-menu content when hovering over menu-items.
@@ -86,7 +88,6 @@ let showDropdown = (e) => {
       // Show content-e.target
       let triggerClass =  e.target.classList[0]; // Get class that links to sub-menu content.
       document.getElementsByClassName(triggerClass)[1].classList.remove('js-hide'); // Get 2nd elem w/that class, which is the sub-menu content, and display it.
-
 
       // Shift drop down into place.
 
@@ -132,13 +133,103 @@ let hideDropdown = (e) => {
   }
 };
 
-// Loop over all class-names 'nav-open' and add eventlistener to them.
+
+// Loop over all class-names 'nav-open' and add eventlistener to them. And call 2 functions.
 let navOpenArr = document.getElementsByClassName('js-nav-open');
 for (let i = 0; i < navOpenArr.length; i++) {
   navOpenArr[i].addEventListener('mouseleave', function (e) {
     hideDropdown(e);
   }, false);
 };
+
+
+// Dynamic active-menu indicator for main-nav
+(function () {
+  let currentPath = location.pathname;
+
+  // let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
+
+  let aArr = document.querySelectorAll('nav a');
+
+  for (let i = 0; i < aArr.length; i++) {
+    // Get href of a tag.
+    let href = aArr[i].getAttribute('href');
+    // Get index position of href inside current path. If not -1 execute code.
+    if (currentPath.indexOf(href) !== -1) {
+      // Add active class to a elem.
+      aArr[i].classList.add('js-nav-a-active');
+    }
+  }
+}());
+
+// Dynamic active-menu indicator for sub-nav. And also for main nav.
+(function () {
+  let currentPath = location.pathname;
+
+  let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
+
+  let aArr = subMenu.getElementsByTagName('a');
+
+  for (let i = 0; i < aArr.length; i++) {
+    // Get href of a tag.
+    let href = aArr[i].getAttribute('href');
+    // Get index position of href inside current path. If not -1 execute code.
+    if (currentPath.indexOf(href) !== -1) {
+      // Add active class to a elem.
+      aArr[i].classList.add('js-nav-sub-menu-active');
+
+      // Apply active-menu indicator to parent main-nav items.
+      // Get a-tags parents first class name.
+      let firstClassNameOfParent = aArr[i].parentNode.classList[0];
+      // Apply active nav css to main nav item.
+      document.getElementsByClassName(firstClassNameOfParent)[0].classList.add('js-nav-a-active');
+    }
+  }
+}());
+
+
+// If hover/leave sub nav mark/un-markt respective main nav item.
+(function () {
+  let subMenu = document.getElementById('js-sub-menu');
+  let divArr = subMenu.getElementsByTagName('div');
+
+  // If sub menu shows, mark respective nav item.
+  subMenu.addEventListener('mousemove', function () {
+    // if (!subMenu.classList.contains('js-hide')) {
+      // Add event listener to all divs in sub menu.
+      for (let i = 0; i < divArr.length; i++) {
+        // Mark respective main nav item as active.
+        if (!divArr[i].classList.contains('js-hide')) {
+          let firstClassName = divArr[i].classList[0];
+          let mainNavItem = document.getElementsByClassName(firstClassName)[0];
+          mainNavItem.classList.add('js-nav-a-active');
+        }
+      }
+    // }
+  }, false);
+
+  // If sub menu doens't show, un-mark respective nav item.
+  subMenu.addEventListener('mouseleave', function (e) {
+    for (let i = 0; i < divArr.length; i++) {
+      // Target respective sub nav div.
+      if (!divArr[i].classList.contains('js-hide')) {
+        let firstClassName = divArr[i].classList[0];
+        console.log(firstClassName);
+        let mainNavItem = document.getElementsByClassName(firstClassName)[0];
+        // Un-mark respective main nav with a delay.
+        console.log('RELATED TARGET: ' + e.relatedTarget);
+        let removeActive = () => {
+          mainNavItem.classList.remove('js-nav-a-active');
+        };
+        let delayRemoveActive = setTimeout(removeActive, 600);
+      }
+    }
+  }, false);
+
+}());
+
+
+// END MAIN NAVIGATION
 
 
 // START MOBILE NAVIGATION

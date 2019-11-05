@@ -157,7 +157,7 @@ nav a {
   letter-spacing: 2.5px;
   font-size: 15px;
   font-weight: 400;
-  color: #a3a3a3;
+  color: #a3a3a3 !important;
 }
 
 h1 {
@@ -410,7 +410,7 @@ address,
  * Header Styles   .header, .logo, .main-naviagtion etc.
 */
 .header-margin-top {
-  height: 134px;
+  height: 133px;
 }
 
 header {
@@ -460,7 +460,11 @@ nav li a {
 }
 
 nav a:hover {
-  color: #565656;
+  color: #565656 !important;
+}
+
+.js-nav-a-active {
+  color: #565656 !important;
 }
 
 .burger-menu {
@@ -522,7 +526,7 @@ nav a:hover {
   background-color: #272727;
 }
 
-.nav-sub-menu-selected { /* TODO: Apply this class in html. */
+.js-nav-sub-menu-active { /* TODO: Apply this class in html. */
   color: #0a0a0a !important;
   background-color: #272727 !important;
 }
