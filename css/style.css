@@ -249,8 +249,26 @@ address,
 }
 
 .container-margin {
-  width: 92%;
+  /* width: 92%; */
   margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+  .container-margin {
+    width: 92%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 690px) {
+  .container-margin {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 690px) and (min-width: 480px) {
+  .container-margin {
+    max-width: 85%;
+  }
 }
 
 .intro-container {
