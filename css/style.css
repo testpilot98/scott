@@ -50,6 +50,12 @@ html,body {
 .panel {
   border:none; }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 /**
  * Color Guide *
 
@@ -215,14 +221,29 @@ address,
   * Global Styles   .main-content-wrapper, p, a, a:visited, button
  */
 
-.page-margin {
-  margin: 0 85px;
-}
-
 .container {
-  max-width: 1400px;
   margin: 0px auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* TODO: Possibly fix shadow so it won't show on bottom. */
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1400px;
+    width: 90%;
+    min-width: 980px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 690px) {
+  .container {
+    width: 679px;
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .container-margin {
