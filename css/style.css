@@ -203,7 +203,8 @@ h3 { /* TODO: Make sure it fit into your typescale. Exhibitions page w/1+ artist
 h4 {   /* TODO: Make sure it fit into your typescale. Applied in Footer so far. */
   font-size: 12px;
   color: #444444;
-  margin: 73px 0px 21px;
+  margin: 0px 0px 21px;
+  padding-top: 73px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
@@ -687,8 +688,7 @@ nav a:hover {
 
 footer {
   background-color: #fcfcfc;
-  height: 360px;
-  overflow: hidden; /* prevent margin collapse */
+  padding-bottom: 14px;
 }
 
 .footer-row {
@@ -714,7 +714,7 @@ footer {
 }
 
 .fa-twitter {
-  padding-right: 14px;
+  padding-right: 16px;
 }
 
 .fa-twitter:hover,
