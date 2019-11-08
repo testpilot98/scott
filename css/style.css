@@ -688,7 +688,7 @@ nav a:hover {
 
 footer {
   background-color: #fcfcfc;
-  padding-bottom: 14px;
+  padding-bottom: 20px;
 }
 
 .footer-row {
@@ -698,11 +698,30 @@ footer {
 .footer-copyright {
   height: 30px; /** vert center **/
   line-height: 30px; /** vert center **/
+  display: inline-block;
 }
 
 .footer-social {
   height: 30px; /** vert center **/
   line-height: 30px; /** vert center **/
+  display: inline-block;
+  float: right;
+}
+
+@media (max-width: 690px) {
+  .footer-row {
+    margin-top: 110px;
+  }
+
+  .footer-copyright {
+    display: block;
+  }
+
+  .footer-social {
+    display: block;
+    float: none;
+    margin-top: 20px;
+  }
 }
 
 .fa-twitter,
@@ -714,7 +733,7 @@ footer {
 }
 
 .fa-twitter {
-  padding-right: 16px;
+  padding-right: 15px;
 }
 
 .fa-twitter:hover,
