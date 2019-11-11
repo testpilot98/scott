@@ -185,7 +185,27 @@ h2 { /* TODO: Make sure it fit into your typescale. Applied index-main so far. *
   line-height: 44px;
   font-weight: 300;
   color: #555555;
-  margin: 70px 0 42px;
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  h2 {
+    font-size: 28.9px;
+    line-height: 35.7px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 690px) {
+  h2 {
+    font-size: 27.2px;
+    line-height: 33.6px;
+  }
+}
+
+@media (max-width: 690px) {
+  h2 {
+    font-size: 25.5px;
+    line-height: 31.5px;
+  }
 }
 
 h3 { /* TODO: Make sure it fit into your typescale. Exhibitions page w/1+ artist. */
@@ -757,6 +777,7 @@ footer {
   width: 100%;
   padding-bottom: 50%;
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 1000px) {
@@ -829,6 +850,7 @@ footer {
 
 .landing-main {
   text-align: center;
+  margin-bottom: 42px;
 }
 
 .landing-a:hover {
