@@ -709,7 +709,7 @@ nav a:hover {
 
 footer {
   background-color: #fcfcfc;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .footer-row {
@@ -741,7 +741,7 @@ footer {
   .footer-social {
     display: block;
     float: none;
-    margin-top: 20px;
+    margin-top: 19px;
   }
 }
 
