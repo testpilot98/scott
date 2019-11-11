@@ -181,6 +181,27 @@ h1 {
   text-transform: uppercase;
 }
 
+@media (max-width: 1300px) and (min-width: 1000px) {
+  h1 {
+    font-size: 40.5px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 690px) {
+  h1 {
+    font-size: 37.8px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 690px) {
+  h1 {
+    font-size: 35.1px;
+    line-height: 39px;
+  }
+}
+
 h2 { /* TODO: Make sure it fit into your typescale. Applied index-main so far. */
   font-size: 34px;
   line-height: 44px;
