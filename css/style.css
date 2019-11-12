@@ -56,6 +56,19 @@ html,body {
   }
 }
 
+/* Override bootstraps large breakpoint @ 992px with breakpoint @ 1000px. */
+@media (min-width: 992px) and (max-width: 1000px) {
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* @media () {
+
+} */
+
 /**
  * Color Guide *
 
@@ -333,6 +346,7 @@ address,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 .intro-text-wrap h4 { /* TODO: Sort conflict with other h4s. Also needs to be in Typography. */
   font-size: 14px;
