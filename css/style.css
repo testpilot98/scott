@@ -490,7 +490,14 @@ address,
 
 @media (max-width: 690px) {
   .gal-img-container {
-    width: 285px;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 370px) {
+  .gal-img-container {
+    width: 100%;
     margin: 0 auto;
   }
 }
