@@ -329,7 +329,7 @@ address,
   }
 }
 
-@media (max-width: 690px) and (min-width: 480px) {
+@media (max-width: 690px) {
   .container-margin {
     max-width: 85%;
   }
