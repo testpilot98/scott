@@ -421,8 +421,20 @@ address,
   margin: 95px 0px 57px;
 }
 
+@media (max-width: 1000px) {
+  .main-container {
+    margin: 75px 0px 57px;
+  }
+}
+
 .main-text-wrap {
   margin-right: 70px;
+}
+
+@media (max-width: 1000px) {
+  .main-text-wrap {
+    margin: 0 10px 50px; /* TODO: Be consitent, your margin should match all similar layouts. I think i will but quick double check.  */
+  }
 }
 
 .main-text-wrap p { /* TODO: Move to Typography. */
