@@ -1182,6 +1182,10 @@ img.mfp-img {
   margin: 130px 0px 32px;
 }
 
+.intro-img-wrap-design {
+  background-image: url("../img/hero-gallery4.jpg");
+}
+
 /**
 *  Interior Design Styles
 */
