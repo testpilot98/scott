@@ -65,10 +65,6 @@ html,body {
   }
 }
 
-/* @media () {
-
-} */
-
 /**
  * Color Guide *
 
@@ -331,6 +327,12 @@ address,
   margin-top: 40px;
 }
 
+@media (max-width: 1000px) {
+  .intro-container {
+    margin-top: 100px;
+  }
+}
+
 .intro-text-container {
   position: relative; /* Vert center */
   height: auto;
@@ -347,6 +349,17 @@ address,
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 1000px) {
+  .intro-text-wrap {
+    padding: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 50px;
+
+  }
+}
 
 .intro-text-wrap h4 { /* TODO: Sort conflict with other h4s. Also needs to be in Typography. */
   font-size: 14px;
