@@ -1198,6 +1198,10 @@ img.mfp-img {
 *  Exhibitions Styles
 */
 
+.intro-img-wrap-exhibitions {
+  background-image: url("../img/hero-gallery5.jpg");
+}
+
 .exhibitions-main-container {
   margin: 120px 0px 32px;
 }
