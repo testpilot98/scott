@@ -811,7 +811,6 @@ footer {
 }
 
 .footer-copyright {
-  height: 30px; /** vert center **/
   line-height: 30px; /** vert center **/
   display: inline-block;
 }
