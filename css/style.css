@@ -361,6 +361,12 @@ address,
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 1300px) {
+  .intro-text-wrap {
+    padding-right: 10%;
+  }
+}
+
 @media (max-width: 1000px) {
   .intro-text-wrap {
     padding: 0;
@@ -368,8 +374,8 @@ address,
     top: auto;
     left: auto;
     transform: none;
-    margin-bottom: 50px;
-
+    margin: 0 10px 50px;
+    width: auto;
   }
 }
 
@@ -397,8 +403,8 @@ address,
 }
 
 .intro-text-wrap p { /* TODO: Sort conflict with other p's. Also needs to be in Typography. */
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 14px;
+  line-height: 20px;
   color: #676767;
   text-align: justify;
   margin: 0px;
@@ -1218,4 +1224,12 @@ img.mfp-img {
 
 .intro-img-wrap-exhibitions-fn {
   background-image: url("../img/hero-gallery5.jpg");
+}
+
+/**
+*  Press Styles
+*/
+
+.intro-img-wrap-press {
+  background-image: url("../img/press.jpg");
 }
