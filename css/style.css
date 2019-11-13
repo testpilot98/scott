@@ -1123,22 +1123,28 @@ img.mfp-img {
 *  Contact Styles
 */
 
-.contact-intro-container {
+.intro-container-contact {
   margin-top: 84px;
 }
 
-.contact-intro-text-wrap {
+.intro-text-wrap-contact {
   text-align: left;
 }
 
-.contact-intro-text-wrap h2 { /* TODO: Include in Typography */
+@media (max-width: 1000px) {
+  .intro-text-wrap-contact {
+    margin: 0; /* takes out margins from intro-text-wrap */
+  }
+}
+
+.intro-text-wrap-contact h2 { /* TODO: Include in Typography */
   padding: 0px; /* TODO: Include in reset not here. */
   margin: 0px; /* TODO: Include in reset not here. */
   color: #444444;
-  font-size: 34px;
+  /* font-size: 34px;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 44px;
+  line-height: 44px; */
   margin: 0px 0px 7px;
   text-transform: uppercase;
 }
@@ -1153,23 +1159,48 @@ img.mfp-img {
   color: #555555;
 }
 
-.contact-intro-img-wrap {
+.intro-img-wrap-contact {
   height: 300px;
+  background-image: url("../img/gallery-front.jpg");
 }
 
-.contact-main-container {
+@media (max-width: 690px) {
+  .intro-img-wrap-contact {
+    height: auto;
+    padding-bottom: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .intro-text-container-contact {
+    order: 2;
+  }
+
+  .intro-img-container-contact {
+    order: 1;
+    margin-bottom: 80px;
+  }
+}
+
+.main-container-contact {
   margin-top: 118px;
   margin-bottom: 57px;
+}
+
+@media (max-width: 1000px) {
+  .main-container-contact {
+    margin-top: 50px;
+  }
 }
 
 .contact-hours-text-wrap h2 { /* TODO: Include in Typography */
   padding: 0px; /* TODO: Include in reset not here. */
   margin: 0px; /* TODO: Include in reset not here. */
   color: #444444;
-  font-size: 34px;
+  /* font-size: 34px;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 44px;
+  line-height: 44px; */
   margin: 0px 0px 10px;
   text-transform: uppercase;
 }
