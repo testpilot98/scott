@@ -307,3 +307,39 @@ document.body.addEventListener('click', function (e) {
 }, false);
 
 // END MOBILE NAVIGATION
+
+
+// SCROLL TO TOP BUTTON
+
+{ // Start smooth scroll module.
+  let upButton = document.getElementById('js-button-to-top');
+
+  // Display up-button if site is scrolled past 1300px (e.g. on re-fresh).
+  if (window.scrollY >= 1300) {
+    upButton.style.bottom = '17px';
+  } else {
+    upButton.style.bottom = '-30px';
+  }
+
+  // Display up-button if user scrolls past 1300px.
+  window.onscroll = () => {
+    if (window.scrollY >= 1300) {
+      upButton.style.bottom = '17px';
+      upButton.style.transition = '0.3s'; // Optional transition.
+    } else {
+      upButton.style.bottom = '-30px';
+    }
+  };
+
+  // Smooth scroll function.
+  let smoothScroll = () => {
+    let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+      window.scrollTo(0, currentScroll - (currentScroll / 13));
+      window.requestAnimationFrame(smoothScroll);
+    }
+  };
+
+  upButton.addEventListener('click', smoothScroll, false);
+
+} // End smooth scroll module.

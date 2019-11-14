@@ -106,7 +106,8 @@ html {
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: initial; /* TODO: best solution, or hidden, auto???
+  can have affect on double vert scroll bars e.g. when dealing with to-pageTop button*/
 }
 
 article,
@@ -565,6 +566,39 @@ address,
   color: #555555;
 }
 
+.button-to-top {
+  display: block;
+  position: fixed;
+  text-align: center;
+  right: 17px;
+  bottom: -30px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  z-index: 9994;
+  height: 29px;
+  width: 29px;
+  background-color: rgba(0,0,0,0.25);
+  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.1s linear;
+}
+
+.button-to-top:hover,
+.button-to-top:focus {
+  background-color: #555555;
+}
+
+.arrow-to-top {
+  font-size: 16px;
+  line-height: 29px;
+}
+
+@media (max-width: 1020px) {
+  .button-to-top {
+    display: none;
+  }
+}
 /* =====================================
   MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
 ===================================== */
