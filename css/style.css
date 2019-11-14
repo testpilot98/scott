@@ -1071,7 +1071,7 @@ img.mfp-img {
 /* Background when displaying images*/
 .mfp-zoom-in.mfp-ready.mfp-bg,
 .mfp-zoom-in.mfp-ready .mfp-preloader {
-   opacity: 0.8;
+   opacity: 0.85;
 }
 /* Image out (when closing lightbox) */
 .mfp-zoom-in.mfp-removing .mfp-figure, .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler{
