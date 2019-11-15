@@ -332,8 +332,28 @@ address,
 @media (max-width: 690px) {
   .container-margin {
     max-width: 85%;
+    max-width: 420px;
   }
 }
+
+@media (max-width: 480px) {
+  .container-margin {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-margin {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container-margin {
+    max-width: 85%;
+  }
+}
+
 
 .intro-container {
   margin-top: 40px;
