@@ -351,10 +351,8 @@ document.body.addEventListener('click', function (e) {
   let imgWrap = document.getElementsByClassName('intro-img-wrap')[0];
 
   if (imgWrap) {
-  window.addEventListener('load', () => {
-      setTimeout(() => {
-        imgWrap.classList.add('js-intro-img-wrap-show');
-      }, 50);
+    window.addEventListener('load', () => {
+      imgWrap.classList.add('js-intro-img-wrap-show');
     });
   }
 }

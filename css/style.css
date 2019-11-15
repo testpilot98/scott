@@ -432,8 +432,9 @@ address,
   /* Image fade in. */
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 2s cubic-bezier(.05,0.2,.4,1);
-  transition: opacity 2s cubic-bezier(.05,0.2,.4,1);
+  /* -webkit-transition: opacity 2s cubic-bezier(.05,0.2,.4,1); */
+  /* transition: opacity 2s cubic-bezier(.05,0.2,.4,1); */
+  transition: opacity 0.6s ease-in;
 }
 
 .js-intro-img-wrap-show {
