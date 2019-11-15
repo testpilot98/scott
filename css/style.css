@@ -131,7 +131,8 @@ a {
     color: inherit;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: none;
   color: inherit;
 }
@@ -682,7 +683,8 @@ nav li a {
   font-weight: 200;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: #565656 !important;
 }
 
@@ -744,7 +746,8 @@ nav a:hover {
   color: #a5a5a5;
 }
 
-.nav-sub-menu a:hover {  /* TODO: Change styling? */
+.nav-sub-menu a:hover,
+.nav-sub-menu a:focus {  /* TODO: Change styling? */
   color: #ccc;
   background-color: #272727;
 }
@@ -807,7 +810,8 @@ nav a:hover {
   z-index: 3;
 }
 
-.material-icons-round.nav-close-btn:hover {
+.material-icons-round.nav-close-btn:hover,
+.material-icons-round.nav-close-btn:focus {
   -webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
@@ -837,7 +841,10 @@ nav a:hover {
   opacity: 0.7;
 }
 
-.mobNav-slide a:hover, .mobNav-prev:hover {
+.mobNav-slide a:hover,
+.mobNav-slide a:focus,
+.mobNav-prev:hover,
+.mobNav-prev:focus {
   opacity: 1;
 }
 
@@ -917,7 +924,9 @@ footer {
 }
 
 .fa-twitter:hover,
-.fa-facebook-f:hover {
+.fa-twitter:focus,
+.fa-facebook-f:hover,
+.fa-facebook-f:focus {
   color: #fff;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -1013,7 +1022,8 @@ footer {
   margin-bottom: 42px;
 }
 
-.landing-a:hover {
+.landing-a:hover,
+.landing-a:focus {
   color: #414141;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -1175,7 +1185,8 @@ img.mfp-img {
   top: 0px;
 }
 /* Rotation of Closing X */
-.mfp-close:hover {
+.mfp-close:hover,
+.mfp-close:focus {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
