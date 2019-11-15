@@ -429,6 +429,16 @@ address,
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  /* Image fade in. */
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s cubic-bezier(.05,0.2,.4,1);
+  transition: opacity 2s cubic-bezier(.05,0.2,.4,1);
+}
+
+.js-intro-img-wrap-show {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 690px) {

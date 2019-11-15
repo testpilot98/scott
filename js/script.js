@@ -343,3 +343,20 @@ document.body.addEventListener('click', function (e) {
   upButton.addEventListener('click', smoothScroll, false);
 
 } // End smooth scroll module.
+
+
+// START FADE IN MAIN IMAGES IN INTRO SECTIONS.
+
+{
+  let imgWrap = document.getElementsByClassName('intro-img-wrap')[0];
+
+  if (imgWrap) {
+  window.addEventListener('load', () => {
+      setTimeout(() => {
+        imgWrap.classList.add('js-intro-img-wrap-show');
+      }, 50);
+    });
+  }
+}
+
+// END FADE IN MAIN IMAGES IN INTRO SECTIONS.
