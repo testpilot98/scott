@@ -657,7 +657,7 @@ nav {
   float: right;
 }
 
-@media(max-width: 1250px) {
+@media(max-width: 1000px) {
   nav ul {
     display: none;
   }
@@ -719,7 +719,7 @@ nav a:focus {
   left: 0;
 }
 
-@media(min-width: 1250px) {
+@media(min-width: 1000px) {
   .burger-menu {
     display: none;
   }
