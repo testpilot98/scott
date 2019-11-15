@@ -70,7 +70,7 @@ html,body {
 }
 
 /* Override bootstraps medium breakpoint @ 768px to 992px with breakpoint @ 690px to 1000px. */
-@media (min-width: 690px) and (max-width: 1000px) {
+@media (min-width: 691px) and (max-width: 1000px) {
   .gal-item {
     flex: 0 0 50%;
     max-width: 50%;
@@ -173,17 +173,12 @@ a {
 }
 
 .header-logo {
-  color: #000;
+  color: #000 !important;
   font-size: 28px;
   line-height: 60px; /* TODO: Adjust for final font. */
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 4px; /* TODO: Adjust/delte depending on font. */
-}
-
-.header-logo:hover {
-  color: inherit;
-  text-decoration: none;
 }
 
 nav a {
