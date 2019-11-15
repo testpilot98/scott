@@ -940,19 +940,20 @@ footer {
   margin-bottom: 70px;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 690px) and (max-width: 1000px) {
   .landing-hero {
     height: 200px;
     padding-bottom: 0;
-    width: calc(100% - 26px);
+    /* width: calc(100% - 26px); */
+    width: 100%;
   }
 }
 
-@media (max-width: 690px) {
+/* @media (max-width: 690px) {
   .landing-hero {
     width: 92.46%;
   }
-}
+} */
 
 .landing-imgWrap {
   position: absolute;
