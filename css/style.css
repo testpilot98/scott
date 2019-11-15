@@ -565,7 +565,7 @@ address,
   font-size: 12px;
   line-height: 17px;
   margin: 0px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .gal-txt-wrap p a { /* TODO: Really needed? */
