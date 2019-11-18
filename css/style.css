@@ -931,6 +931,7 @@ footer {
   }
 }
 
+.fa-instagram,
 .fa-twitter,
 .fa-facebook-f {
   font-family: FontAwesome;
@@ -939,10 +940,13 @@ footer {
   color: #0a0a0a;
 }
 
+.fa-instagram,
 .fa-twitter {
   padding-right: 15px;
 }
 
+.fa-instagram:hover,
+.fa-instagram:focus,
 .fa-twitter:hover,
 .fa-twitter:focus,
 .fa-facebook-f:hover,
