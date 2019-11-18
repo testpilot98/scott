@@ -839,6 +839,12 @@ nav a:focus {
   -webkit-transition: opacity 0.2s ease, color 0.2s ease;
   transition: opacity 0.2s ease, color 0.2s ease;
   opacity: 0.7;
+  /* New nav style. */  /* TODO: If ok w/Scott, incorporate into this rule properly, by overriding existing. */
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2.5px;
+  line-height: 35px;
 }
 
 .mobNav-slide a:hover,
