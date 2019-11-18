@@ -688,6 +688,10 @@ nav a:focus {
   color: #565656 !important;
 }
 
+.nav-no-pointer {
+  cursor: default;
+}
+
 .js-nav-a-active {
   color: #565656 !important;
 }
