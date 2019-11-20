@@ -173,15 +173,6 @@ a {
   -webkit-transition: color 0.2s;
 }
 
-.header-logo {
-  color: #000 !important;
-  font-size: 28px;
-  line-height: 60px; /* TODO: Adjust for final font. */
-  text-transform: uppercase;
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 4px; /* TODO: Adjust/delte depending on font. */
-}
-
 nav a {
   padding: 0px 10px;
   text-transform: uppercase;
@@ -660,11 +651,68 @@ header {
   padding-top: 58px;
 }
 
+@media (max-width: 1000px) {
+  .header-margin-top {
+    height: 88px;
+  }
+
+  header {
+    height: 88px;
+
+  }
+
+  .header-row {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 690px) {
+  .header-margin-top {
+    height: 63.5px; /* Header-row (27.5) + padding (2*18). */
+  }
+
+  header {
+    height: 63.5px; /* Header-row (27.5) + padding (2*18). */
+  }
+
+  .header-row {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+.header-logo {
+  width: 386px;
+  display: inline-block;
+  margin-top: 2.025px; /* To horiz align with nav items. */
+}
+
+@media (max-width: 1250px) {
+  .header-logo {
+    width: 316px;
+    margin-top: 6.185px; /* To horiz align with nav items. */
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-logo {
+    width: 231px;
+    margin-top: 0px; /* To horiz align with nav items. */
+  }
+}
+
 nav {
   float: right;
 }
 
 @media(max-width: 1000px) {
+  /* Horiz align burger-nav w/logo. */
+  nav {
+    height: 27.5px; /* Same as logo height.*/
+    display: flex;
+    align-items: center;
+  }
+
   nav ul {
     display: none;
   }
