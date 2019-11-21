@@ -290,16 +290,17 @@ let shiftMobNav = (e) => {
       header = document.getElementsByClassName('js-header')[0],
       pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
 
+
+console.log(e.target.classList.contains('js-mobNav-container'));
   // If open buttons clicked, move mobile-nav-container in viewport and add page layover.
   if (e.target.id === 'js-mobNav-open') {
     mobNavContainer.classList.add('js-mobNav-slideIn');
     pageLayover.classList.add('js-pageLayover-show');
-  // If close buttons clicked, or click outside mobile-nav-container move it out viewport.
-} else if ((e.target.id === 'js-mobNav-close') || (!header.contains(e.target))) {
+  // If close buttons clicked, or click outside header and outside mobile-nav-container move it out viewport.
+} else if ((e.target.id === 'js-mobNav-close') || ((!header.contains(e.target)) && (!mobNavContainer.contains(e.target)))) {
     mobNavContainer.classList.remove('js-mobNav-slideIn');
     pageLayover.classList.remove('js-pageLayover-show');
   }
-
 };
 
 document.body.addEventListener('click', function (e) {
