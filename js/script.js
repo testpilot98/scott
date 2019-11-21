@@ -22,7 +22,7 @@ let setHeaderWidth = function () {
 
 // MAGNIFIC POPUP
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('#mfp-portfolio').magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -322,14 +322,14 @@ document.body.addEventListener('click', function (e) {
   }
 
   // Display up-button if user scrolls past 1300px.
-  window.onscroll = () => {
-    if (window.scrollY >= 1300) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 300) {
       upButton.style.bottom = '17px';
       upButton.style.transition = '0.3s'; // Optional transition.
     } else {
       upButton.style.bottom = '-30px';
     }
-  };
+  });
 
   // Smooth scroll function.
   let smoothScroll = () => {
