@@ -24,28 +24,24 @@ let setHeaderWidth = function() {
 {
   let minWidth691 = window.matchMedia('(min-width: 691px)'),
       maxWidth1000 = window.matchMedia('(max-width: 1000px)'),
-      headerMarginTop = document.getElementsByClassName('header-margin-top')[0],
       header = document.getElementsByTagName('header')[0];
 
   // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
   if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
-    // Reduce height of header & header-top-margin-div.
+    // Reduce height of header.
     header.style.transform = 'translateY(-23.5px)';
-    headerMarginTop.style.height = '64.5px';
   }
 
   // On scroll.
   window.addEventListener('scroll', () => {
     // If btw 691-1000px and if user scrolls past 85px.
     if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
-      // Reduce height of header & header-top-margin-div
+      // Reduce height of header
       header.style.transform = 'translateY(-23.5px)';
-      headerMarginTop.style.height = '64.5px';
       header.style.transition = '.4s';
     } else {
-      // Cancel height reduction of header & header-top-margin-div if user scrolls back up before 85px.
+      // Cancel height reduction of header if user scrolls back up before 85px.
       header.style.transform = 'none';
-      headerMarginTop.style.height = '';
     }
   });
 
@@ -53,13 +49,11 @@ let setHeaderWidth = function() {
   window.addEventListener('resize', () => {
     // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
     if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
-      // Reduce height of header & header-top-margin-div.
+      // Reduce height of header.
       header.style.transform = 'translateY(-23.5px)';
-      headerMarginTop.style.height = '64.5px';
     } else {
-      // Cancel height reduction of header & header-top-margin-div if user scrolls back up before 85px.
+      // Cancel height reduction of header if user scrolls back up before 85px.
       header.style.transform = 'none';
-      headerMarginTop.style.height = '';
     }
   });
 
