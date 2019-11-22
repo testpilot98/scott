@@ -180,22 +180,19 @@ let hideDropdown = (e) => {
 };
 
 
-// Loop over all class-names 'nav-open' and add eventlistener to them. And call 2 functions.
+// Loop over all class-names 'nav-open' and add eventlistener to them.
 let navOpenArr = document.getElementsByClassName('js-nav-open');
 for (let i = 0; i < navOpenArr.length; i++) {
-  navOpenArr[i].addEventListener('mouseleave', function(e) {
+  navOpenArr[i].addEventListener('mouseleave', function (e) {
     hideDropdown(e);
   }, false);
 };
 
 
-// Dynamic active-menu indicator for main-nav
-(function() {
-  let currentPath = location.pathname;
-
-  // let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
-
-  let aArr = document.querySelectorAll('nav a');
+// Dynamic active-menu indicator for main-nav.
+(function () {
+  let currentPath = location.pathname,
+      aArr = document.querySelectorAll('nav a');
 
   for (let i = 0; i < aArr.length; i++) {
     // Get href of a tag.
@@ -209,12 +206,10 @@ for (let i = 0; i < navOpenArr.length; i++) {
 }());
 
 // Dynamic active-menu indicator for sub-nav. And also for main nav.
-(function() {
-  let currentPath = location.pathname;
-
-  let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
-
-  let aArr = subMenu.getElementsByTagName('a');
+(function () {
+  let currentPath = location.pathname,
+      subMenu = document.getElementsByClassName('nav-sub-menu')[0],
+      aArr = subMenu.getElementsByTagName('a');
 
   for (let i = 0; i < aArr.length; i++) {
     // Get href of a tag.
@@ -239,9 +234,8 @@ for (let i = 0; i < navOpenArr.length; i++) {
   let subMenu = document.getElementById('js-sub-menu');
   let divArr = subMenu.getElementsByTagName('div');
 
-  // If sub menu shows, mark respective nav item.
-  subMenu.addEventListener('mousemove', function() {
-    // if (!subMenu.classList.contains('js-hide')) {
+  // If hovering over sub menu, mark respective nav item.
+  subMenu.addEventListener('mousemove', function () {
     // Add event listener to all divs in sub menu.
     for (let i = 0; i < divArr.length; i++) {
       // Mark respective main nav item as active.
@@ -251,19 +245,21 @@ for (let i = 0; i < navOpenArr.length; i++) {
         mainNavItem.classList.add('js-nav-a-active');
       }
     }
-    // }
   }, false);
 
-  // If sub menu doens't show, un-mark respective nav item.
-  subMenu.addEventListener('mouseleave', function(e) {
+  // If sub menu doesn't show, un-mark respective nav item.
+  subMenu.addEventListener('mouseleave', function (e) {
+    // Get number of active main-nav-items.
+    let activeArr = document.getElementsByClassName('js-nav-a-active');
+
     for (let i = 0; i < divArr.length; i++) {
       // Target respective sub nav div.
-      if (!divArr[i].classList.contains('js-hide')) {
+      // If respective sub-nav-div contains class js-hide and
+      // if the number of active main-nav-items > 1.
+      if ((!divArr[i].classList.contains('js-hide')) && (activeArr.length > 1)) {
         let firstClassName = divArr[i].classList[0];
-        console.log(firstClassName);
         let mainNavItem = document.getElementsByClassName(firstClassName)[0];
         // Un-mark respective main nav with a delay.
-        console.log('RELATED TARGET: ' + e.relatedTarget);
         let removeActive = () => {
           mainNavItem.classList.remove('js-nav-a-active');
         };
