@@ -1,28 +1,74 @@
 // HEADER WIDTH
 
-let onLoad = function () {
+let onLoad = function() {
   setHeaderWidth();
 };
 
 window.addEventListener('load', onLoad);
 
-let onResize = function () {
+let onResize = function() {
   setHeaderWidth();
 }
 
 window.addEventListener('resize', onResize);
 
-let setHeaderWidth = function () {
+let setHeaderWidth = function() {
   let header = document.getElementsByClassName('js-header')[0],
-      containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
+    containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
 
   header.style.width = containerWidth + 'px';
 };
 
+// HEADER HEIGHT
+// Reduce height on scroll btw width 691px-1000px.
+{
+  let minWidth691 = window.matchMedia('(min-width: 691px)'),
+      maxWidth1000 = window.matchMedia('(max-width: 1000px)'),
+      headerMarginTop = document.getElementsByClassName('header-margin-top')[0],
+      header = document.getElementsByTagName('header')[0];
+
+  // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
+  if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+    // Reduce height of header & header-top-margin-div.
+    header.style.transform = 'translateY(-23.5px)';
+    headerMarginTop.style.height = '64.5px';
+  }
+
+  // On scroll.
+  window.addEventListener('scroll', () => {
+    // If btw 691-1000px and if user scrolls past 85px.
+    if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+      // Reduce height of header & header-top-margin-div
+      header.style.transform = 'translateY(-23.5px)';
+      headerMarginTop.style.height = '64.5px';
+      header.style.transition = '.4s';
+    } else {
+      // Cancel height reduction of header & header-top-margin-div if user scrolls back up before 85px.
+      header.style.transform = 'none';
+      headerMarginTop.style.height = '';
+    }
+  });
+
+  // On resize.
+  window.addEventListener('resize', () => {
+    // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
+    if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+      // Reduce height of header & header-top-margin-div.
+      header.style.transform = 'translateY(-23.5px)';
+      headerMarginTop.style.height = '64.5px';
+    } else {
+      // Cancel height reduction of header & header-top-margin-div if user scrolls back up before 85px.
+      header.style.transform = 'none';
+      headerMarginTop.style.height = '';
+    }
+  });
+
+} // END HEADER HEIGHT
+
 
 // MAGNIFIC POPUP
 
-$(document).ready(function () {
+$(document).ready(function() {
   $('#mfp-portfolio').magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -33,33 +79,39 @@ $(document).ready(function () {
     image: {
       titleSrc: 'title'
     },
-    fixedContentPos: false,  // Makes page scrollable when img open.
+    fixedContentPos: false, // Makes page scrollable when img open.
     mainClass: 'mfp-zoom-in',
     removalDelay: 200, //delay removal by X to allow out-animation
     showCloseBtn: false, // Hides default close button.
     callbacks: {
-        beforeOpen: function() {
-            $('#portfolio a').each(function(){
-                $(this).attr('title', $(this).find('img').attr('alt'));
-            });
-        },
-        open: function() {
-            //overwrite default prev + next function. Add timeout for css3 crossfade animation
-            $.magnificPopup.instance.next = function() {
-                var self = this;
-                self.wrap.removeClass('mfp-image-loaded');
-                setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
-            }
-            $.magnificPopup.instance.prev = function() {
-                var self = this;
-                self.wrap.removeClass('mfp-image-loaded');
-                setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
-            }
-        },
-        imageLoadComplete: function() {
-            var self = this;
-            setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
+      beforeOpen: function() {
+        $('#portfolio a').each(function() {
+          $(this).attr('title', $(this).find('img').attr('alt'));
+        });
+      },
+      open: function() {
+        //overwrite default prev + next function. Add timeout for css3 crossfade animation
+        $.magnificPopup.instance.next = function() {
+          var self = this;
+          self.wrap.removeClass('mfp-image-loaded');
+          setTimeout(function() {
+            $.magnificPopup.proto.next.call(self);
+          }, 120);
         }
+        $.magnificPopup.instance.prev = function() {
+          var self = this;
+          self.wrap.removeClass('mfp-image-loaded');
+          setTimeout(function() {
+            $.magnificPopup.proto.prev.call(self);
+          }, 120);
+        }
+      },
+      imageLoadComplete: function() {
+        var self = this;
+        setTimeout(function() {
+          self.wrap.addClass('mfp-image-loaded');
+        }, 16);
+      }
     }
   });
 });
@@ -86,7 +138,7 @@ let showDropdown = (e) => {
       subMenu.classList.remove('js-hide');
 
       // Show content-e.target
-      let triggerClass =  e.target.classList[0]; // Get class that links to sub-menu content.
+      let triggerClass = e.target.classList[0]; // Get class that links to sub-menu content.
       document.getElementsByClassName(triggerClass)[1].classList.remove('js-hide'); // Get 2nd elem w/that class, which is the sub-menu content, and display it.
 
       // Shift drop down into place.
@@ -98,7 +150,7 @@ let showDropdown = (e) => {
       let headerOffsetLeft = document.getElementsByClassName('js-header')[0].offsetLeft;
       let subMenuLeftPosition = leftEdgeOfTarget - headerOffsetLeft;
       // Find length of drop down to center it under respective a-tag.
-      let subMenuWidth = subMenu.offsetWidth;  // This has to run after we display both submenu and its child divs.
+      let subMenuWidth = subMenu.offsetWidth; // This has to run after we display both submenu and its child divs.
       let aTagWidth = e.target.offsetWidth;
       let adjustSubMenuPosition = (subMenuWidth - aTagWidth) / 2
       // Set drop down position
@@ -109,13 +161,13 @@ let showDropdown = (e) => {
   }
 };
 
-document.getElementsByTagName('nav')[0].addEventListener('mouseover', function (e) {
+document.getElementsByTagName('nav')[0].addEventListener('mouseover', function(e) {
   showDropdown(e);
 }, false);
 
 
 // If mouseenter on drop down cancel timeout for closing it.
-document.getElementById('js-sub-menu').addEventListener('mouseover', function () {
+document.getElementById('js-sub-menu').addEventListener('mouseover', function() {
   clearTimeout(delayHide);
 }, false);
 
@@ -137,14 +189,14 @@ let hideDropdown = (e) => {
 // Loop over all class-names 'nav-open' and add eventlistener to them. And call 2 functions.
 let navOpenArr = document.getElementsByClassName('js-nav-open');
 for (let i = 0; i < navOpenArr.length; i++) {
-  navOpenArr[i].addEventListener('mouseleave', function (e) {
+  navOpenArr[i].addEventListener('mouseleave', function(e) {
     hideDropdown(e);
   }, false);
 };
 
 
 // Dynamic active-menu indicator for main-nav
-(function () {
+(function() {
   let currentPath = location.pathname;
 
   // let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
@@ -163,7 +215,7 @@ for (let i = 0; i < navOpenArr.length; i++) {
 }());
 
 // Dynamic active-menu indicator for sub-nav. And also for main nav.
-(function () {
+(function() {
   let currentPath = location.pathname;
 
   let subMenu = document.getElementsByClassName('nav-sub-menu')[0];
@@ -189,27 +241,27 @@ for (let i = 0; i < navOpenArr.length; i++) {
 
 
 // If hover/leave sub nav mark/un-markt respective main nav item.
-(function () {
+(function() {
   let subMenu = document.getElementById('js-sub-menu');
   let divArr = subMenu.getElementsByTagName('div');
 
   // If sub menu shows, mark respective nav item.
-  subMenu.addEventListener('mousemove', function () {
+  subMenu.addEventListener('mousemove', function() {
     // if (!subMenu.classList.contains('js-hide')) {
-      // Add event listener to all divs in sub menu.
-      for (let i = 0; i < divArr.length; i++) {
-        // Mark respective main nav item as active.
-        if (!divArr[i].classList.contains('js-hide')) {
-          let firstClassName = divArr[i].classList[0];
-          let mainNavItem = document.getElementsByClassName(firstClassName)[0];
-          mainNavItem.classList.add('js-nav-a-active');
-        }
+    // Add event listener to all divs in sub menu.
+    for (let i = 0; i < divArr.length; i++) {
+      // Mark respective main nav item as active.
+      if (!divArr[i].classList.contains('js-hide')) {
+        let firstClassName = divArr[i].classList[0];
+        let mainNavItem = document.getElementsByClassName(firstClassName)[0];
+        mainNavItem.classList.add('js-nav-a-active');
       }
+    }
     // }
   }, false);
 
   // If sub menu doens't show, un-mark respective nav item.
-  subMenu.addEventListener('mouseleave', function (e) {
+  subMenu.addEventListener('mouseleave', function(e) {
     for (let i = 0; i < divArr.length; i++) {
       // Target respective sub nav div.
       if (!divArr[i].classList.contains('js-hide')) {
@@ -256,7 +308,7 @@ let shiftSlide = (e) => {
   // Move linked slides on left to center
   let shiftLinkedSlideRight = () => {
     let slidesOnLeft = document.getElementsByClassName('js-mobNav-left'),
-        topSlide = slidesOnLeft.length - 1;
+      topSlide = slidesOnLeft.length - 1;
 
     slidesOnLeft[topSlide].classList.remove('js-mobNav-left');
   };
@@ -277,7 +329,7 @@ let shiftSlide = (e) => {
 
 };
 
-document.getElementsByClassName('js-mobNav-container')[0].addEventListener('click', function (e) {
+document.getElementsByClassName('js-mobNav-container')[0].addEventListener('click', function(e) {
   shiftSlide(e);
 }, false);
 
@@ -287,23 +339,21 @@ document.getElementsByClassName('js-mobNav-container')[0].addEventListener('clic
 let shiftMobNav = (e) => {
 
   let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
-      header = document.getElementsByClassName('js-header')[0],
-      pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
+    header = document.getElementsByClassName('js-header')[0],
+    pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
 
-
-console.log(e.target.classList.contains('js-mobNav-container'));
   // If open buttons clicked, move mobile-nav-container in viewport and add page layover.
   if (e.target.id === 'js-mobNav-open') {
     mobNavContainer.classList.add('js-mobNav-slideIn');
     pageLayover.classList.add('js-pageLayover-show');
-  // If close buttons clicked, or click outside header and outside mobile-nav-container move it out viewport.
-} else if ((e.target.id === 'js-mobNav-close') || ((!header.contains(e.target)) && (!mobNavContainer.contains(e.target)))) {
+    // If close buttons clicked, or click outside header and outside mobile-nav-container move it out viewport.
+  } else if ((e.target.id === 'js-mobNav-close') || ((!header.contains(e.target)) && (!mobNavContainer.contains(e.target)))) {
     mobNavContainer.classList.remove('js-mobNav-slideIn');
     pageLayover.classList.remove('js-pageLayover-show');
   }
 };
 
-document.body.addEventListener('click', function (e) {
+document.body.addEventListener('click', function(e) {
   shiftMobNav(e);
 }, false);
 
@@ -324,7 +374,7 @@ document.body.addEventListener('click', function (e) {
 
   // Display up-button if user scrolls past 1300px.
   window.addEventListener('scroll', () => {
-    if (window.scrollY >= 300) {
+    if (window.scrollY >= 1300) {
       upButton.style.bottom = '17px';
       upButton.style.transition = '0.3s'; // Optional transition.
     } else {

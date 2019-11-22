@@ -284,7 +284,7 @@ address,
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* TODO: Possibly fix shadow so it won't show on bottom. */
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .container {
     max-width: 1400px;
     width: 90%;
@@ -624,6 +624,7 @@ address,
     display: none;
   }
 }
+
 /* =====================================
   MODULE/TEMPLATE STYLES   new section for e.g.'Header Styles', 'Footer Styles', 'Any-Page-Or-Section-Thats-Duplicated' etc.
 ===================================== */
@@ -658,7 +659,6 @@ header {
 
   header {
     height: 88px;
-
   }
 
   .header-row {
@@ -668,16 +668,16 @@ header {
 
 @media (max-width: 690px) {
   .header-margin-top {
-    height: 63.5px; /* Header-row (27.5) + padding (2*18). */
+    height: 64.5px; /* Header-row (27.5) + padding (2*18.5). */
   }
 
   header {
-    height: 63.5px; /* Header-row (27.5) + padding (2*18). */
+    height: 64.5px; /* Header-row (27.5) + padding (2*18.5). */
   }
 
   .header-row {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
   }
 }
 
@@ -758,6 +758,7 @@ nav a:focus {
   display: inline-block;
   border-top: 2px solid #a3a3a3;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .burger-menu:after, .burger-menu:before {
@@ -778,7 +779,7 @@ nav a:focus {
   left: 0;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1001px) {
   .burger-menu {
     display: none;
   }
@@ -1021,7 +1022,7 @@ footer {
   margin-bottom: 70px;
 }
 
-@media (min-width: 690px) and (max-width: 1000px) {
+@media (min-width: 691px) and (max-width: 1000px) {
   .landing-hero {
     height: 200px;
     padding-bottom: 0;
