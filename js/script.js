@@ -271,6 +271,22 @@ for (let i = 0; i < navOpenArr.length; i++) {
 }());
 
 
+// On screen re-size, hide main nav, as long mobile nav is open.
+// Note: One additional line of code for this module under 'move mobile navigation container'.
+{
+  window.addEventListener('resize', () => {
+    let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0];
+        navUl = document.querySelector('nav ul');
+
+    if (mobNavContainer.classList.contains('js-mobNav-slideIn')) {
+      navUl.style.display = 'none';
+    } else {
+      navUl.style.display = '';
+    }
+  });
+}
+
+
 // END MAIN NAVIGATION
 
 
@@ -331,6 +347,7 @@ let shiftMobNav = (e) => {
   let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
     header = document.getElementsByClassName('js-header')[0],
     pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
+    navUl = document.querySelector('nav ul');
 
   // If open buttons clicked, move mobile-nav-container in viewport and add page layover.
   if (e.target.id === 'js-mobNav-open') {
@@ -340,6 +357,7 @@ let shiftMobNav = (e) => {
   } else if ((e.target.id === 'js-mobNav-close') || ((!header.contains(e.target)) && (!mobNavContainer.contains(e.target)))) {
     mobNavContainer.classList.remove('js-mobNav-slideIn');
     pageLayover.classList.remove('js-pageLayover-show');
+    navUl.style.display = ''; // Remove display-none from main-nav-ul. Needed for module: 'On screen re-size, hide main nav, as long mobile nav is open.'
   }
 };
 
