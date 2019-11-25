@@ -414,6 +414,16 @@ document.body.addEventListener('click', function(e) {
       imgWrap.classList.add('js-intro-img-wrap-show');
     });
   }
-}
+} // End fade in main images in intro sections.
 
-// END FADE IN MAIN IMAGES IN INTRO SECTIONS.
+
+// DYNAMIC YEAR.
+
+{
+  // Get yearSpan.
+  let yearSpan = document.getElementById('year');
+  // Create txt node w dynamic year.
+  let currentYear = document.createTextNode(new Date().getFullYear());
+  // Append txt node to yearSpan.
+  yearSpan.appendChild(currentYear);
+} // End dynamic year.
