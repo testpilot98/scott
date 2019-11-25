@@ -31,6 +31,10 @@
   // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
   if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
     // Reduce height of header.
+    header.style.oTransform = 'translateY(-23.5px)';
+    header.style.msTransform = 'translateY(-23.5px)';
+    header.style.mozTransform = 'translateY(-23.5px)';
+    header.style.webkitTransform = 'translateY(-23.5px)';
     header.style.transform = 'translateY(-23.5px)';
   }
 
@@ -39,9 +43,17 @@
     // If btw 691-1000px and if user scrolls past 85px.
     if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
       // Reduce height of header
+      header.style.oTransform = 'translateY(-23.5px)';
+      header.style.msTransform = 'translateY(-23.5px)';
+      header.style.mozTransform = 'translateY(-23.5px)';
+      header.style.webkitTransform = 'translateY(-23.5px)';
       header.style.transform = 'translateY(-23.5px)';
     } else {
       // Cancel height reduction of header if user scrolls back up before 85px.
+      header.style.oTransform = 'none';
+      header.style.msTransform = 'none';
+      header.style.mozTransform = 'none';
+      header.style.webkitTransform = 'none';
       header.style.transform = 'none';
     }
   });
@@ -51,9 +63,17 @@
     // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
     if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
       // Reduce height of header.
+      header.style.oTransform = 'translateY(-23.5px)';
+      header.style.msTransform = 'translateY(-23.5px)';
+      header.style.mozTransform = 'translateY(-23.5px)';
+      header.style.webkitTransform = 'translateY(-23.5px)';
       header.style.transform = 'translateY(-23.5px)';
     } else {
       // Cancel height reduction of header if user scrolls back up before 85px.
+      header.style.oTransform = 'none';
+      header.style.msTransform = 'none';
+      header.style.mozTransform = 'none';
+      header.style.webkitTransform = 'none';
       header.style.transform = 'none';
     }
   });
