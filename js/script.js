@@ -385,7 +385,6 @@ document.body.addEventListener('click', function(e) {
   window.addEventListener('scroll', () => {
     if (window.scrollY >= 1300) {
       upButton.style.bottom = '17px';
-      upButton.style.transition = '0.3s'; // Optional transition.
     } else {
       upButton.style.bottom = '-30px';
     }
