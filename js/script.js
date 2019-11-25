@@ -40,7 +40,6 @@
     if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
       // Reduce height of header
       header.style.transform = 'translateY(-23.5px)';
-      header.style.transition = '.4s';
     } else {
       // Cancel height reduction of header if user scrolls back up before 85px.
       header.style.transform = 'none';
