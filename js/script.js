@@ -1,23 +1,25 @@
 // HEADER WIDTH
 
-let onLoad = function() {
-  setHeaderWidth();
-};
+{
+  let onLoad = function () {
+    setHeaderWidth();
+  };
 
-window.addEventListener('load', onLoad);
+  window.addEventListener('load', onLoad);
 
-let onResize = function() {
-  setHeaderWidth();
+  let onResize = function () {
+    setHeaderWidth();
+  }
+
+  window.addEventListener('resize', onResize);
+
+  let setHeaderWidth = function () {
+    let header = document.getElementsByClassName('js-header')[0],
+      containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
+
+    header.style.width = containerWidth + 'px';
+  };
 }
-
-window.addEventListener('resize', onResize);
-
-let setHeaderWidth = function() {
-  let header = document.getElementsByClassName('js-header')[0],
-    containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
-
-  header.style.width = containerWidth + 'px';
-};
 
 // HEADER HEIGHT
 // Reduce height on scroll btw width 691px-1000px.
@@ -155,13 +157,13 @@ let showDropdown = (e) => {
   }
 };
 
-document.getElementsByTagName('nav')[0].addEventListener('mouseover', function(e) {
+document.getElementsByTagName('nav')[0].addEventListener('mouseover', function (e) {
   showDropdown(e);
 }, false);
 
 
 // If mouseenter on drop down cancel timeout for closing it.
-document.getElementById('js-sub-menu').addEventListener('mouseover', function() {
+document.getElementById('js-sub-menu').addEventListener('mouseover', function () {
   clearTimeout(delayHide);
 }, false);
 
