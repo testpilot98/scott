@@ -829,7 +829,8 @@ nav a:focus {
 .js-nav-sub-menu-active { /* TODO: Apply this class in html. */
   color: #0a0a0a !important;
   /* background-color: #272727 !important; */ /* TODO: Take out if ok w/Scott. */
-  background-color: rgba(39, 39, 39, 0.9) !important;
+  /*background-color: rgba(39, 39, 39, 0.9) !important;*/  /* TODO: Take out if ok w/Scott. */;
+  background-color: #a3a3a3;
 }
 
 .js-hide { /* TODO: Add to global styles and implement it where ever display none is used w/JS. */
