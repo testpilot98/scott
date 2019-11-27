@@ -1003,6 +1003,18 @@ footer {
   }
 }
 
+@media (max-width: 380px) {
+  .footer-copyright {
+    line-height: 20px;
+  }
+  .footer-copyright-rights {
+    display: block;
+  }
+  .footer-social {
+    margin-top: 25px;
+  }
+}
+
 .fa-instagram,
 .fa-twitter,
 .fa-facebook-f {
