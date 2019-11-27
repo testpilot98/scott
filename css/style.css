@@ -741,6 +741,10 @@ nav li a {
   padding: 14px 11px 39px;
 }
 
+nav li:last-child a {
+  padding-right: 0px;
+}
+
 .material-icons.nav-expand-more {
   position: relative;
   left: 2.5px;
