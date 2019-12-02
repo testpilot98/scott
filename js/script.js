@@ -275,8 +275,9 @@ $(document).ready(function() {
       for (let i = 0; i < divArr.length; i++) {
         // Target respective sub nav div.
         // If respective sub-nav-div contains class js-hide and
-        // if the number of active main-nav-items > 1.
-        if ((!divArr[i].classList.contains('js-hide')) && (activeArr.length > 1)) {
+        // if the number of active main-nav-items > 1, or
+        // if on home-page.
+        if (((!divArr[i].classList.contains('js-hide')) && (activeArr.length > 1)) || (window.location.href === 'file:///D:/Google%20Drive/it/1%20webdev/projects/scott/appScott/index.html')) { // TODO: Change href to corret url.
           let firstClassName = divArr[i].classList[0];
           let mainNavItem = document.getElementsByClassName(firstClassName)[0];
           // Un-mark respective main nav with a delay.
