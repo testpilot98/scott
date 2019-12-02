@@ -1030,12 +1030,15 @@ footer {
   padding-right: 15px;
 }
 
-.fa-instagram:hover,
 .fa-instagram:focus,
-.fa-twitter:hover,
 .fa-twitter:focus,
-.fa-facebook-f:hover,
 .fa-facebook-f:focus {
+  color: #0a0a0a;
+}
+
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-facebook-f:hover {
   color: #fff;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
