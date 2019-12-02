@@ -291,6 +291,51 @@ $(document).ready(function() {
   }());
 
 
+  // Hover logic for main nav-items.
+  
+  {
+    let navAtagArr = document.querySelectorAll('nav li a'),
+        activeArr = document.getElementsByClassName('js-nav-a-active');
+    
+    // Loop over all nav a-tags.
+    for (let i = 0; i < navAtagArr.length; i++) {
+
+      // When hovering over main nav item with a sub-nav, mark item as active.
+
+      // Add eventlisteners to all a-tags, on mouse-enter.
+      navAtagArr[i].addEventListener('mouseenter', (e) => {
+        // If a-tag has a sub-menu
+        if (e.target.classList.contains('js-nav-open')) {
+          // Mark a-tag as active.
+          e.target.classList.add('js-nav-a-active');
+        }
+      });
+
+      // When un-hover main nav item with a sub-nav, deactivate w/delay, unless related-target is another nav item with a sub-nav.
+
+      // Add eventlisteners to all a-tags, on mouse-leave.
+      navAtagArr[i].addEventListener('mouseleave', (e) => {
+        // If a-tag has a sub-menu, and is not the only active item, and mouse does not hover over another a-tag w/submenu next.
+        // Or current page is the index-page, and mouse does not hover over another a-tag w/submenu next.
+        if ((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1) && (!e.relatedTarget.classList.contains('js-nav-open')) || ((window.location.href === 'file:///D:/Google%20Drive/it/1%20webdev/projects/scott/appScott/index.html') && (!e.relatedTarget.classList.contains('js-nav-open')))) {
+          // Un-mark respective main nav with a delay.
+          let removeActive = () => {
+            e.target.classList.remove('js-nav-a-active');
+          };
+          let delayRemoveActive = setTimeout(removeActive, 600);
+          // If a-tag has a sub-menu, and is not the only active item, or current page is the index-page.
+        } else if (((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1)) || (window.location.href === 'file:///D:/Google%20Drive/it/1%20webdev/projects/scott/appScott/index.html')) {
+          // Un-mark respective main nav without delay.
+          let removeActive = () => {
+            e.target.classList.remove('js-nav-a-active');
+          };
+          removeActive();
+        }
+      });
+    }
+  } // End hover logic for main nav-items.
+
+
   // On screen re-size, hide main nav, as long mobile nav is open.
   // Note: One additional line of code for this module under 'move mobile navigation container'.
   {
