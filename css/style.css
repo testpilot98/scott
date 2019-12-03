@@ -654,8 +654,6 @@ header {
   width: 100%;
   background-color: #fff;
   z-index: 20;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .header-row {
