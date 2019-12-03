@@ -654,6 +654,16 @@ header {
   width: 100%;
   background-color: #fff;
   z-index: 20;
+
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+
+.js-header-show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header-row {
