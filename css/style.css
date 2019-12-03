@@ -569,7 +569,7 @@ address,
 
 @media (min-width: 371px) and (max-width: 690px) {
   .gal-txt-wrap {
-    width: 300px;
+    width: 250px;
     margin: 0 auto;
   }
 }
