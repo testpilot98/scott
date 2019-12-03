@@ -80,7 +80,6 @@ html,body {
 }
 
 
-
 /**
  * Color Guide *
 
@@ -523,7 +522,7 @@ address,
 
 @media (max-width: 690px) {
   .gal-img-container {
-    width: 300px;
+    width: 250px;
     margin: 0 auto;
   }
 }
