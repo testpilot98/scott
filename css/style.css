@@ -83,13 +83,26 @@ html, body {
 /**
  * Color Guide *
 
- teal -- #00b8b8
- dark teal -- #027d7d
- hot pink -- #de3d83
- yellow -- #e4bd0b
- purple -- #9d4eb6
- green -- #5da87b
- grey -- #a5a5a5
+#676767 -- body
+#444444 -- h1-h6; some p's
+#555555 -- a; button-to-top hover; landing-main h2
+#0a0a0a -- address & copyright; js-nav-sub-menu-active; social media icons
+#ffffff -- body bg; button-to-top; header bg; social icons hover
+rgba(0,0,0,0.25) -- button-to-top bg-color
+#a3a3a3 -- nav li a; burger-menu; js-nav-sub-menu-active bg-color
+#565656 -- nav li a hover; js-nav-a-active;
+#a5a5a5 -- nav-sub-menu a
+#cccccc -- nav-sub-menu a hover
+#272727 -- nav-sub-menu a hover bg-color
+rgba(0, 0, 0, 0.8) -- js-pageLayover-show
+#000000 -- material-icons-round.nav-close-btn; mobNav-slide; mobNav-slide a; mobNav-prev
+#fcfcfc -- footer bg-color
+#414141 -- landing-main h2 hover
+#eaeaea -- mobNav-container part of linear gradient
+rgba(0, 0, 0, 0.15) -- container box shadow
+rgba(0, 0, 0, 0.2) -- nav-sub-menu box shadow
+rgba(0, 0, 0, 0.13) -- mobNav prev background
+
 */
 
 
@@ -410,7 +423,7 @@ address,
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1.2px solid #444;
+    border-top: 1.2px solid #444444;
     margin: 1.1em auto;
     padding: 0;
     width: 35%;
@@ -575,7 +588,7 @@ address,
   text-align: center;
   right: 17px;
   bottom: -30px;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -623,7 +636,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 20;
 
   visibility: hidden;
@@ -793,7 +806,7 @@ nav li a:focus {
   position: absolute;
   text-align: center;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  background: #fff; /* TODO: take out */
+  background: #ffffff; /* TODO: take out */
 }
 
 .nav-sub-menu a {
@@ -808,7 +821,7 @@ nav li a:focus {
 
 .nav-sub-menu a:hover,
 .nav-sub-menu a:focus {
-  color: #ccc;
+  color: #cccccc;
   background-color: #272727;
 }
 
@@ -836,7 +849,7 @@ nav li a:focus {
   pointer-events: none;
 }
 
-.js-pageLayover-show { /* TODO: Make generic class? */
+.js-pageLayover-show {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -850,7 +863,7 @@ nav li a:focus {
   top: 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
   z-index: 99999999;
   right: -300px;
   background: linear-gradient(145deg, #ffffff, #eaeaea);
@@ -859,7 +872,7 @@ nav li a:focus {
 }
 
 .material-icons-round.nav-close-btn {
-	color: #000;
+	color: #000000;
   opacity: .9;
   font-size: 29px;
   font-weight: 100;
@@ -869,7 +882,7 @@ nav li a:focus {
   -webkit-transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
   transition: all 0.47s cubic-bezier(0.3, 1, 0.3, 0.95) 0s;
   cursor: pointer;
-  -webkit-text-stroke: 0.1px #fff; /* Make icon-font thinner. */
+  -webkit-text-stroke: 0.1px #ffffff; /* Make icon-font thinner. */
   z-index: 3;
   /* New nav style. */ /* TODO: When approved by Scott, incorporate into rule properly. */
   opacity: 0.7;
@@ -885,7 +898,7 @@ nav li a:focus {
 }
 
 .mobNav-slide {
-  color: #000;
+  color: #000000;
   overflow: visible;
   /* height: 100%; */ /* TODO: Needed? */
   width: 234px;
@@ -1015,7 +1028,7 @@ footer {
 .fa-instagram:hover,
 .fa-twitter:hover,
 .fa-facebook-f:hover {
-  color: #fff;
+  color: #ffffff;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   text-decoration: none;
