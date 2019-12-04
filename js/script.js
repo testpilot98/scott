@@ -437,7 +437,7 @@ $(document).ready(function() {
   let upButton = document.getElementById('js-button-to-top');
 
   // Display up-button if site is scrolled past 1300px (e.g. on re-fresh).
-  if (window.scrollY >= 1300) {
+  if (window.scrollY >= 425) {
     upButton.style.bottom = '17px';
   } else {
     upButton.style.bottom = '-30px';
@@ -445,7 +445,7 @@ $(document).ready(function() {
 
   // Display up-button if user scrolls past 1300px.
   window.addEventListener('scroll', () => {
-    if (window.scrollY >= 1300) {
+    if (window.scrollY >= 425) {
       upButton.style.bottom = '17px';
     } else {
       upButton.style.bottom = '-30px';
