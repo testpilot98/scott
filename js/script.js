@@ -30,7 +30,7 @@
       header = document.getElementsByTagName('header')[0];
 
   // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
-  if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+  if ((minWidth691.matches && maxWidth1000.matches) && (window.pageYOffset >= 85)) {
     // Reduce height of header.
     header.style.oTransform = 'translateY(-23.5px)';
     header.style.msTransform = 'translateY(-23.5px)';
@@ -42,7 +42,7 @@
   // On scroll.
   window.addEventListener('scroll', () => {
     // If btw 691-1000px and if user scrolls past 85px.
-    if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+    if ((minWidth691.matches && maxWidth1000.matches) && (window.pageYOffset >= 85)) {
       // Reduce height of header
       header.style.oTransform = 'translateY(-23.5px)';
       header.style.msTransform = 'translateY(-23.5px)';
@@ -62,7 +62,7 @@
   // On resize.
   window.addEventListener('resize', () => {
     // If btw 691-1000px and if site is scrolled past 85px (e.g. on re-fresh).
-    if ((minWidth691.matches && maxWidth1000.matches) && (window.scrollY >= 85)) {
+    if ((minWidth691.matches && maxWidth1000.matches) && (window.pageYOffset >= 85)) {
       // Reduce height of header.
       header.style.oTransform = 'translateY(-23.5px)';
       header.style.msTransform = 'translateY(-23.5px)';
@@ -337,7 +337,7 @@ $(document).ready(function() {
   // Note: One additional line of code for this module under 'move mobile navigation container'.
   {
     window.addEventListener('resize', () => {
-      let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0];
+      let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
           navUl = document.querySelector('nav ul');
 
       if (mobNavContainer.classList.contains('js-mobNav-slideIn')) {
@@ -403,7 +403,7 @@ $(document).ready(function() {
 
     let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
       header = document.getElementsByClassName('js-header')[0],
-      pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0];
+      pageLayover = document.getElementsByClassName('js-mobNav-pageLayover')[0],
       navUl = document.querySelector('nav ul');
 
     // If open buttons clicked, move mobile-nav-container in viewport and add page layover.
@@ -431,7 +431,7 @@ $(document).ready(function() {
   let upButton = document.getElementById('js-button-to-top');
 
   // Display up-button if site is scrolled past 1300px (e.g. on re-fresh).
-  if (window.scrollY >= 425) {
+  if (window.pageYOffset >= 425) {
     upButton.style.bottom = '17px';
   } else {
     upButton.style.bottom = '-30px';
@@ -439,7 +439,7 @@ $(document).ready(function() {
 
   // Display up-button if user scrolls past 1300px.
   window.addEventListener('scroll', () => {
-    if (window.scrollY >= 425) {
+    if (window.pageYOffset >= 425) {
       upButton.style.bottom = '17px';
     } else {
       upButton.style.bottom = '-30px';
