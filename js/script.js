@@ -248,9 +248,8 @@ $(document).ready(function() {
     }
   }());
 
-
   // If hover/leave sub nav mark/un-markt respective main nav item.
-  (function() {
+  (function () {
     let subMenu = document.getElementById('js-sub-menu');
     let divArr = subMenu.getElementsByTagName('div');
 
@@ -290,9 +289,7 @@ $(document).ready(function() {
     }, false);
   }());
 
-
   // Hover logic for main nav-items.
-  
   {
     let navAtagArr = document.querySelectorAll('nav li a'),
         activeArr = document.getElementsByClassName('js-nav-a-active');
@@ -356,7 +353,6 @@ $(document).ready(function() {
 // START MOBILE NAVIGATION
 {
   // Move slides inside navigation container.
-
   let shiftSlide = (e) => {
 
     // Move clicked slide left/right depending on if prev/next button was clicked.
@@ -377,7 +373,7 @@ $(document).ready(function() {
     // Move linked slides on left to center
     let shiftLinkedSlideRight = () => {
       let slidesOnLeft = document.getElementsByClassName('js-mobNav-left'),
-        topSlide = slidesOnLeft.length - 1;
+          topSlide = slidesOnLeft.length - 1;
 
       slidesOnLeft[topSlide].classList.remove('js-mobNav-left');
     };
@@ -387,7 +383,7 @@ $(document).ready(function() {
     // If link to new slide is clicked.
     if (e.target.classList.contains('js-mobNav-next')) {
       shiftCurrentSlide('js-mobNav-left');
-      idName = e.target.id; // Id on link
+      idName = e.target.id; // Id on link.
       shiftLinkedSlideLeft(idName);
 
       // If back link is clicked.
@@ -395,7 +391,6 @@ $(document).ready(function() {
       shiftCurrentSlide('js-mobNav-right');
       shiftLinkedSlideRight();
     }
-
   };
 
   document.getElementsByClassName('js-mobNav-container')[0].addEventListener('click', function(e) {
@@ -404,7 +399,6 @@ $(document).ready(function() {
 
 
   // Move mobile navigation container.
-
   let shiftMobNav = (e) => {
 
     let mobNavContainer = document.getElementsByClassName('js-mobNav-container')[0],
@@ -431,7 +425,7 @@ $(document).ready(function() {
 } // End mobile navigation.
 
 
-// SCROLL TO TOP BUTTON.
+// SCROLL TO TOP BUTTON
 
 {
   let upButton = document.getElementById('js-button-to-top');
