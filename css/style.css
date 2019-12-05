@@ -551,6 +551,16 @@ address,
   object-fit: cover; /* TODO: No IE support. Blurry in Edge. Test w modernizer for object-fit, use JS if not supported. Use article found online.*/
 }
 
+.js-hide-image {
+  opacity: 0;
+}
+
+.js-object-fit-alternative {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 /* TODO: needed? */
 /* .gal-img-wrap a {
   background-color: transparent;

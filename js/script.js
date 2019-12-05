@@ -493,3 +493,30 @@ $(document).ready(function() {
     });
   }
 } // End fade in main nav.
+
+
+// START OBJECT-FIT ALTERNATIVE FOR IE
+
+{
+  // If IE or EDGE <15.
+  if (document.createElement('div').style.objectFit === undefined) {
+
+    let imgContainerArr = document.getElementsByClassName('gal-img-container');
+
+    // Loop over all image containers.
+    for (let i = 0; i < imgContainerArr.length; i++) {
+      let container = imgContainerArr[i],
+          img = container.getElementsByTagName('img')[0],
+          imgUrl = img.getAttribute('src');
+
+      if (imgUrl) {
+        // Hide image in html.
+        img.classList.add('js-hide-image');
+
+        // Add image as bg-image.
+        container.style.backgroundImage = 'url(' + imgUrl + ')';
+        container.classList.add('js-object-fit-alternative');
+      }
+    }
+  }
+} // End object-fit alternative for IE.
