@@ -1,24 +1,20 @@
 // HEADER WIDTH
 
 {
-  let onLoad = function () {
-    setHeaderWidth();
-  };
-
-  window.addEventListener('load', onLoad);
-
-  let onResize = function () {
-    setHeaderWidth();
-  }
-
-  window.addEventListener('resize', onResize);
-
   let setHeaderWidth = function () {
     let header = document.getElementsByClassName('js-header')[0],
-      containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
+        containerWidth = document.getElementsByClassName('container')[0].offsetWidth;
 
     header.style.width = containerWidth + 'px';
   };
+
+  setHeaderWidth();
+
+  // On resize.
+  window.addEventListener('resize', () => {
+    setHeaderWidth();
+  });
+
 } // End header width.
 
 
@@ -87,9 +83,7 @@
   let header = document.getElementsByTagName('header')[0];
 
   if (header) {
-    window.addEventListener('load', () => {
-      header.classList.add('js-header-show');
-    });
+    header.classList.add('js-header-show');
   }
 } // End fade in header.
 
@@ -479,9 +473,7 @@ $(document).ready(function() {
   let imgWrap = document.getElementsByClassName('intro-img-wrap')[0];
 
   if (imgWrap) {
-    window.addEventListener('load', () => {
-      imgWrap.classList.add('js-intro-img-wrap-show');
-    });
+    imgWrap.classList.add('js-intro-img-wrap-show');
   }
 } // End fade in main images in intro sections.
 
