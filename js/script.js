@@ -450,7 +450,7 @@ $(document).ready(function() {
   let smoothScroll = () => {
     let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
     if (currentScroll > 0) {
-      window.scrollTo(0, currentScroll - (currentScroll / 13));
+      window.scrollTo(0, currentScroll - 25);
       window.requestAnimationFrame(smoothScroll);
     }
   };
