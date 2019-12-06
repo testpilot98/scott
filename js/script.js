@@ -81,6 +81,19 @@
 } // End header height.
 
 
+// START FADE IN HEADER.
+
+{
+  let header = document.getElementsByTagName('header')[0];
+
+  if (header) {
+    window.addEventListener('load', () => {
+      header.classList.add('js-header-show');
+    });
+  }
+} // End fade in header.
+
+
 // MAGNIFIC POPUP
 
 $(document).ready(function() {
@@ -480,19 +493,6 @@ $(document).ready(function() {
       currentYear = document.createTextNode(new Date().getFullYear());
   yearSpan.appendChild(currentYear);
 } // End dynamic year.
-
-
-// START FADE IN MAIN NAV.
-
-{
-  let header = document.getElementsByTagName('header')[0];
-
-  if (header) {
-    window.addEventListener('load', () => {
-      header.classList.add('js-header-show');
-    });
-  }
-} // End fade in main nav.
 
 
 // START OBJECT-FIT ALTERNATIVE FOR IE
