@@ -491,7 +491,7 @@ address,
   }
 }
 
-.gal-container p {  /* Paras on press page. */
+.gal-container p {  /* Paras on press page. */   /* TODO: Move to press section? */
   padding: 8px 0 30px;
   margin: 0 10px;
 }
@@ -1453,5 +1453,27 @@ img.mfp-img {
     padding: 0;
     order: 1;
     margin-bottom: 50px;
+  }
+}
+
+.video-container {
+  max-width: 400px;
+  margin: 15px auto 50px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-iframe {  /* TODO: Maybe better to do decendant selector so wp-user don't have to add class? */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .video-wrapper {
+    padding-bottom: 65%;
   }
 }
