@@ -1455,8 +1455,8 @@ footer {
   height: 100%;
 }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   .video-wrapper {
     padding-bottom: 65%;
   }
-}
+}*/
