@@ -1442,6 +1442,9 @@ footer {
 .video-container {
   max-width: 400px;
   margin: 15px auto 50px;
+
+  max-width: 100%;
+  margin: 15px 10px 50px;
 }
 
 .video-wrapper {
