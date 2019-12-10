@@ -321,14 +321,14 @@ $(document).ready(function() {
       navAtagArr[i].addEventListener('mouseleave', (e) => {
         // If a-tag has a sub-menu, and is not the only active item, and mouse does not hover over another a-tag w/submenu next.
         // Or current page is the index-page, and mouse does not hover over another a-tag w/submenu next.
-        if ((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1) && (!e.relatedTarget.classList.contains('js-nav-open')) || ((window.location.href === 'file:///D:/Google%20Drive/it/1%20webdev/projects/scott/appScott/index.html') && (!e.relatedTarget.classList.contains('js-nav-open')))) {
+        if ((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1) && (!e.relatedTarget.classList.contains('js-nav-open')) || ((window.location.href === 'https://testpilot98.github.io/scott/') && (!e.relatedTarget.classList.contains('js-nav-open')))) { // TODO: Change href to corret url.
           // Un-mark respective main nav with a delay.
           let removeActive = () => {
             e.target.classList.remove('js-nav-a-active');
           };
           let delayRemoveActive = setTimeout(removeActive, 600);
           // If a-tag has a sub-menu, and is not the only active item, or current page is the index-page.
-        } else if (((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1)) || (window.location.href === 'file:///D:/Google%20Drive/it/1%20webdev/projects/scott/appScott/index.html')) {
+        } else if (((e.target.classList.contains('js-nav-open')) && (activeArr.length > 1)) || (window.location.href === 'https://testpilot98.github.io/scott/')) { // TODO: Change href to corret url.
           // Un-mark respective main nav without delay.
           let removeActive = () => {
             e.target.classList.remove('js-nav-a-active');
